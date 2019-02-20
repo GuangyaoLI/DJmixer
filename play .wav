@@ -1,0 +1,23 @@
+int i=0;
+
+while(1)
+{  
+  dis = disMeasure();  
+  printf("distance = %0.2f cm\n",dis);
+  
+  if ( dis>=10 && dis<30 && i=0)
+  {
+    system("play test.wav");
+    i=i+1;
+  }
+  else if( dis>=10 && dis<30 && i>0)
+  {
+    i=i+1;
+  }
+  else
+  {
+    i=0;
+  }
+  delay(1000);  
+}
+
