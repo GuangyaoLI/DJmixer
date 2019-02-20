@@ -1,0 +1,15 @@
+
+while(1)
+{  
+  dis = disMeasure();  
+  printf("distance = %0.2f cm\n",dis);
+  
+  while( dis>=10 && dis<30)
+  {
+    system("play test.wav");
+    dis = disMeasure();  
+    printf("distance = %0.2f cm\n",dis);
+  }
+  
+  delay(1000);  
+}
