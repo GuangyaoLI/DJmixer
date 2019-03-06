@@ -2,23 +2,16 @@
 #include <wiringPi.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include <unistd.h>  //被下面5行代替
+#include <unistd.h> 
 
 #include <sys/time.h>
 #include <sys/types.h>
 #include <signal.h>
-#include<iostream>
+#include <iostream>
 #include <sys/wait.h>
 #include <sys/types.h>
 
-//sleep在VC中使用带上头文件
-//#include <windows.h>
-// linux系统需要添加的头文件　　#include <unistd.h>
 
-//lile
-//#include<thread>
-//#include<boost/thread.hpp>
-//#include<mutex>
 using namespace std;
 
 #define Trig  8//0
@@ -97,7 +90,7 @@ int main(void)
 			soundpath =soundpath1;  //需要播放第一首歌
 			flag =1;                //标记需要歌的标志
 		}
-		else if( dis<30 && dis>=20)
+		else if( dis>=20 && dis<30)
 		{
 			soundpath =soundpath2;
 			flag =2;
@@ -151,7 +144,7 @@ int main(void)
 		}
 	
 		delay(1000);
-		//sleep(1);  //可以替换上面
+		
 	}
 	return 0;
 }
