@@ -20,9 +20,9 @@ using namespace std;
 int flag =-1,  //描述播放状态-1表示未初始化，0未播放，1第一首歌，2第二首歌，3第三首歌
 int oldflag =-1,  //描述前一首歌的状态播放状态-1表示未初始化，0未播放，1第一首歌，2第二首歌，3第三首歌
 
-char soundpath1[] ="play /DJmixer/DesiJourney1.wav";  //三首歌曲位置
-char soundpath2[] ="play /DJmixer/DesiJourney2.wav";
-char soundpath3[] ="play /DJmixer/DesiJourney3.wav";
+char soundpath1[] ="play /DJmixer/DesiJourney.wav";  //三首歌曲位置
+char soundpath2[] ="play /DJmixer/doublebass.wav";
+char soundpath3[] ="play /DJmixer/MoodyLoop.wav";
 
 
 
