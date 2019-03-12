@@ -17,8 +17,8 @@ using namespace std;
 #define Trig  8//0
 #define Echo  9//1
 
-int flag =-1,  
-int oldflag =-1,  
+int flag =-1;  
+int oldflag =-1;
 
 char soundpath1[] ="play /DJmixer/DesiJourney.wav"; 
 char soundpath2[] ="play /DJmixer/doublebass.wav";
