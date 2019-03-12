@@ -138,28 +138,28 @@ int main(void)
 						perror("error");
 						exit(0);
 					}
-          else if(pid==1)
-          {
-            close(0);
-            execv("/DJmixer/DesiJourney", NULL);
-            perror("error");
-            exit(0);
-          }
-          else if(pid==2)
-          {
-            close(0);
-            execv("/DJmixer/doublebass", NULL);
-            perror("error");
-            exit(0);
-          }
-          else if(pid==2)
-          {
-            close(0);
-            execv("/DJmixer/MoodyLoop", NULL);
-            perror("error");
-            exit(0);
-          }
-        }
+					else if(pid==1)
+					{
+						close(0);
+						execv("/DJmixer/DesiJourney", NULL);
+						perror("error");
+						exit(0);
+					}
+					else if(pid==2)
+					{
+						close(0);
+						execv("/DJmixer/doublebass", NULL);
+						perror("error");
+						exit(0);
+					}
+					else if(pid==2)
+					{
+						close(0);
+						execv("/DJmixer/MoodyLoop", NULL);
+						perror("error");
+						exit(0);
+					}
+				}
 			}
 		}
 	
