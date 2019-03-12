@@ -20,9 +20,9 @@ using namespace std;
 int flag =-1;  
 int oldflag =-1;
 
-char soundpath1[] ="play /DJmixer/DesiJourney.wav"; 
-char soundpath2[] ="play /DJmixer/doublebass.wav";
-char soundpath3[] ="play /DJmixer/MoodyLoop.wav";
+char soundpath1[] ="/DJmixer/DesiJourney.wav"; 
+char soundpath2[] ="/DJmixer/doublebass.wav";
+char soundpath3[] ="/DJmixer/MoodyLoop.wav";
 
 
 
