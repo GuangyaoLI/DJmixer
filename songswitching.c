@@ -77,7 +77,7 @@ int main(void)
 	ultraInit();
 
 	pid_t pid =-10;  
-	autofile();      
+        //autofile();      
 	char *soundpath;
 
 	while(1)
