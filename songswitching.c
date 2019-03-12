@@ -116,7 +116,7 @@ int main(void)
 				{
 					close(0);
 					printf(soundpath);
-					execve(soundpath);
+					execv(soundpath, NULL);
 					perror("error");
 					exit(0);
 				}
@@ -135,7 +135,7 @@ int main(void)
 					{
 						close(0);
 						printf(soundpath);
-						execve(soundpath);
+						execv(soundpath, NULL);
 						perror("error");
 						exit(0);
 					}
