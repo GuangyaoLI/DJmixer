@@ -21,7 +21,7 @@ int main() {
   int dir;
   snd_pcm_uframes_t frames;
   char *buffer;
-  
+
 
   /* Open PCM device for playback. */
   rc = snd_pcm_open(&handle, "default",
@@ -85,14 +85,14 @@ int main() {
   loops = 5000000 / val;
 
   while (1) {
-    loops--;
-    printf("%ld\n", loops);
-    
+  //  loops--;
+  //  printf("%ld\n", loops);
+
 
     rc = read(0, buffer, size);
-    
+
     /**/
-    
+
        if (rc == 0) {
       fprintf(stderr, "end of file on input\n");
       break;
@@ -114,11 +114,11 @@ int main() {
               "short write, write %d frames\n", rc);
     }
 
-    
-     
+
+
     /**/
-    
-    
+
+
   }
 
   snd_pcm_drain(handle);
