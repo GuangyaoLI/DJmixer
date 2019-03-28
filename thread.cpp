@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdlib>
+#include <unistd.h>
 #include <pthread.h>
 
 using namespace std;
@@ -10,8 +11,7 @@ void *PrintHello(void *threadid)
 {
    // 对传入的参数进行强制类型转换，由无类型指针变为整形数指针，然后再读取
    int tid = *((int*)threadid);
-
-   system("./alsaDemo.o < MoodyLoop.wav");
+   execlp("/usr/bin/omxplayer","omxplayer", "-o", "local", "DesiJourney.wav",NULL);
 
    cout << "Hello Runoob! 线程 ID, " << tid << endl;
    pthread_exit(NULL);
@@ -21,8 +21,8 @@ void *PrintHello1(void *threadid)
 {
    // 对传入的参数进行强制类型转换，由无类型指针变为整形数指针，然后再读取
    int tid = *((int*)threadid);
-   system("amixer set Master 20%");
-   system("./alsaDemo.o < DesiJourney.wav");
+   
+   execlp("/usr/bin/omxplayer","omxplayer", "-o", "local", "MoodyLoop.wav",NULL);
    cout << "Hello Runoob! 线程 ID, " << tid << endl;
    pthread_exit(NULL);
 }

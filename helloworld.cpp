@@ -5,8 +5,8 @@
 #include <stdio.h>
 #include <sys/time.h>
 //}
-#define Trig  8//0
-#define Echo  9//1
+#define Trig  9//0
+#define Echo  8//1
 
 void ultraInit(void)
 {

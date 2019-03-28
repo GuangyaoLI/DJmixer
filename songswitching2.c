@@ -14,8 +14,8 @@
 
 using namespace std;
 
-#define Trig  8//0
-#define Echo  9//1
+#define Trig  9//0
+#define Echo  8//1
 
 int flag =-1;
 int oldflag =-1;
@@ -141,21 +141,21 @@ int main(void)
 					else if(pid==1)
 					{
 						close(0);
-						execv("/DJmixer/DesiJourney", NULL);
+						execv("/DJmixer/DesiJourney.wav", NULL);
 						perror("error");
 						exit(0);
 					}
 					else if(pid==2)
 					{
 						close(0);
-						execv("/DJmixer/doublebass", NULL);
+						execv("/DJmixer/doublebass.wav", NULL);
 						perror("error");
 						exit(0);
 					}
 					else if(pid==2)
 					{
 						close(0);
-						execv("/DJmixer/MoodyLoop", NULL);
+						execv("/DJmixer/MoodyLoop.wav", NULL);
 						perror("error");
 						exit(0);
 					}

@@ -11,18 +11,21 @@
 #include <sys/wait.h>
 #include <sys/types.h>
 
+#include <linux/input.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 
 using namespace std;
 
-#define Trig  8//0
-#define Echo  9//1
+#define Trig  9//0
+#define Echo  8//1
 
 int flag =-1;  
 int oldflag =-1;
 
-char soundpath1[] ="/DJmixer/DesiJourney.wav"; 
-char soundpath2[] ="/DJmixer/doublebass.wav";
-char soundpath3[] ="/DJmixer/MoodyLoop.wav";
+char soundpath1[] ="DesiJourney.wav"; 
+char soundpath2[] ="doublebass.wav";
+char soundpath3[] ="MoodyLoop.wav";
 
 
 
@@ -65,7 +68,12 @@ float disMeasure(void)
 
 int main(void)
 {
+	//
+	FILE *in;
+	char buff[1024];
+	//
 	float dis;
+	
 	wiringPiSetup();
 
 	if(wiringPiSetup() == -1)
@@ -73,7 +81,7 @@ int main(void)
 		printf("setuo wiringPi failed !");
 		return 1;
 	}
-
+	
 	ultraInit();
 
 	pid_t pid =-10;  
@@ -116,7 +124,7 @@ int main(void)
 				{
 					close(0);
 					printf(soundpath);
-					execv(soundpath, NULL);
+					execlp("/usr/bin/omxplayer","omxplayer", "-o", "local", soundpath,NULL);
 					perror("error");
 					exit(0);
 				}
@@ -128,6 +136,32 @@ int main(void)
 			{
 				oldflag =flag;
 				kill(pid,9);
+				//
+				int fd_kb;
+				fd_kb = open("/dev/input/event0",O_RDWR);
+				struct input_event event;
+				event.code=KEY_Q;
+				event.type=EV_KEY;
+				event.value=1;
+				gettimeofday(&event.time,0);
+				if(write(fd_kb,&event,sizeof(event))!=sizeof(event))
+				{
+					printf("write /dev/input/event0 failed/n");
+				}
+				event.value=0;
+				if(write(fd_kb,&event,sizeof(event))!=sizeof(event))
+				{
+					printf("write /dev/input/event0 failed/n");
+				}
+				//
+				/*
+				if(!(in = popen("soundpath","w"))){
+					return 1;
+				}
+				char buffer[] = "q\n";
+				fwirte(buffer,sizeof(char),sizeof(buffer),in);
+				fflush(in);
+				*/
 				if(flag>0)
 				{
 					pid=fork();
@@ -135,7 +169,7 @@ int main(void)
 					{
 						close(0);
 						printf(soundpath);
-						execv(soundpath, NULL);
+						execlp("/usr/bin/omxplayer","omxplayer", "-o", "local", soundpath,NULL);
 						perror("error");
 						exit(0);
 					}
