@@ -99,7 +99,7 @@ int main(void)
 			{
 			dis = disMeasure();
 			printf("distance = %0.2f cm\n",dis);
-			if(dis<10 && dis>=20 && dis<40)
+			if(dis>=20 && dis<40)
 			{
 				const char* msg = "q";
 				p.send(msg, strlen(msg));
@@ -114,22 +114,48 @@ int main(void)
 			soundpath =soundpath2;
 			//oldpath =soundpath2;
 			auto p=Popen({"omxplayer","-o","local",soundpath},output{PIPE},input{PIPE});
-			flag =2;
+			flag =1;
+			while(flag)
+			{
+			dis = disMeasure();
+			printf("distance = %0.2f cm\n",dis);
+			if((dis>=10 && dis<20)||(dis>=30 && dis<40))
+			{
+				const char* msg = "q";
+				p.send(msg, strlen(msg));
+				auto res = p.communicate(nullptr, 0);
+				std::cout << res.first.buf.data() << std::endl;
+				flag =0;
+			}
+			}
 		}
 		else if( dis>=30 &&dis<40)
 		{
 			soundpath =soundpath3;
 			//oldpath =soundpath3;
 			auto p=Popen({"omxplayer","-o","local",soundpath},output{PIPE},input{PIPE});
-			flag =3;
+			flag =1;
+			while(flag)
+			{
+			dis = disMeasure();
+			printf("distance = %0.2f cm\n",dis);
+			if(dis>=10 && dis<30)
+			{
+				const char* msg = "q";
+				p.send(msg, strlen(msg));
+				auto res = p.communicate(nullptr, 0);
+				std::cout << res.first.buf.data() << std::endl;
+				flag =0;
+			}
+			}
 		}
-		else                    
+		/*else                    
 		{
 			soundpath =NULL;
 			flag =0;
-		}
+		}*/
 		
-		if(oldflag <=0)
+		/*if(oldflag <=0)
 		{
 			oldflag=flag;
 			if(flag>0)
@@ -173,7 +199,7 @@ int main(void)
 					}
 				}
 			}
-		}
+		}*/
 	
 		delay(1000);
 		
