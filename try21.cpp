@@ -13,19 +13,16 @@
 #include "subprocess.hpp"
 
 using namespace std;
+using namespace subprocess;
 
 #define Trig  9
 #define Echo  8
 
 int flag =-1;  
-int oldflag =-1;
 
 char soundpath1[] ="DesiJourney.wav"; 
 char soundpath2[] ="doublebass.wav";
 char soundpath3[] ="MoodyLoop.wav";
-
-
-
 
 
 void ultraInit(void)
@@ -77,11 +74,8 @@ int main(void)
 	}
 	
 	ultraInit();
-
-	pid_t pid =-10;  
-        //autofile();      
+     
 	char *soundpath;
-	//char *oldpath;
 	
 
 	while(1)
@@ -92,115 +86,63 @@ int main(void)
 		if(dis>=10 && dis<20)
 		{
 			soundpath =soundpath1;
-			//oldpath =soundpath1;
 			auto p=Popen({"omxplayer","-o","local",soundpath},output{PIPE},input{PIPE});
 			flag =1;
 			while(flag)
 			{
-			dis = disMeasure();
-			printf("distance = %0.2f cm\n",dis);
-			if(dis>=20 && dis<40)
-			{
-				const char* msg = "q";
-				p.send(msg, strlen(msg));
-				auto res = p.communicate(nullptr, 0);
-				std::cout << res.first.buf.data() << std::endl;
-				flag =0;
-			}
+				dis = disMeasure();
+				printf("distance = %0.2f cm\n",dis);
+				if(dis>=20 && dis<40)
+				{
+					const char* msg = "q";
+					p.send(msg, strlen(msg));
+					auto res = p.communicate(nullptr, 0);
+					std::cout << res.first.buf.data() << std::endl;
+					flag =0;
+				}
+				delay(1000);
 			}
 		}
 		else if( dis>=20 && dis<30)
 		{
 			soundpath =soundpath2;
-			//oldpath =soundpath2;
 			auto p=Popen({"omxplayer","-o","local",soundpath},output{PIPE},input{PIPE});
 			flag =1;
 			while(flag)
 			{
-			dis = disMeasure();
-			printf("distance = %0.2f cm\n",dis);
-			if((dis>=10 && dis<20)||(dis>=30 && dis<40))
-			{
-				const char* msg = "q";
-				p.send(msg, strlen(msg));
-				auto res = p.communicate(nullptr, 0);
-				std::cout << res.first.buf.data() << std::endl;
-				flag =0;
-			}
+				dis = disMeasure();
+				printf("distance = %0.2f cm\n",dis);
+				if((dis>=10 && dis<20)||(dis>=30 && dis<40))
+				{
+					const char* msg = "q";
+					p.send(msg, strlen(msg));
+					auto res = p.communicate(nullptr, 0);
+					std::cout << res.first.buf.data() << std::endl;
+					flag =0;
+				}
+				delay(1000);
 			}
 		}
 		else if( dis>=30 &&dis<40)
 		{
 			soundpath =soundpath3;
-			//oldpath =soundpath3;
 			auto p=Popen({"omxplayer","-o","local",soundpath},output{PIPE},input{PIPE});
 			flag =1;
 			while(flag)
 			{
-			dis = disMeasure();
-			printf("distance = %0.2f cm\n",dis);
-			if(dis>=10 && dis<30)
-			{
-				const char* msg = "q";
-				p.send(msg, strlen(msg));
-				auto res = p.communicate(nullptr, 0);
-				std::cout << res.first.buf.data() << std::endl;
-				flag =0;
-			}
+				dis = disMeasure();
+				printf("distance = %0.2f cm\n",dis);
+				if(dis>=10 && dis<30)
+				{
+					const char* msg = "q";
+					p.send(msg, strlen(msg));
+					auto res = p.communicate(nullptr, 0);
+					std::cout << res.first.buf.data() << std::endl;
+					flag =0;
+				}
+				delay(1000);
 			}
 		}
-		/*else                    
-		{
-			soundpath =NULL;
-			flag =0;
-		}*/
-		
-		/*if(oldflag <=0)
-		{
-			oldflag=flag;
-			if(flag>0)
-			{
-				pid =fork();
-				if(pid==0)  
-				{
-					close(0);
-					//printf(soundpath);
-				        auto p=Popen({"omxplayer","-o","local",soundpath},output{PIPE},input{PIPE});
-					//execlp("/usr/bin/omxplayer","omxplayer", "-o", "local", soundpath,NULL);
-					perror("error");
-					exit(0);
-				}
-			}
-		}
-		else
-		{
-			if(oldflag!=flag) 
-			{
-				oldflag =flag;
-				kill(pid,9);
-				//
-				const char* msg = "q";
-				p.send(msg, strlen(msg));
-				auto res = p.communicate(nullptr, 0);
-				std::cout << res.first.buf.data() << std::endl;
-				//
-				
-				if(flag>0)
-				{
-					pid=fork();
-					if(pid ==0)
-					{
-						close(0);
-						//printf(soundpath);
-						auto p=Popen({"omxplayer","-o","local",soundpath},output{PIPE},input{PIPE});
-						//execlp("/usr/bin/omxplayer","omxplayer", "-o", "local", soundpath,NULL);
-						perror("error");
-						exit(0);
-					}
-				}
-			}
-		}*/
-	
 		delay(1000);
 		
 	}
