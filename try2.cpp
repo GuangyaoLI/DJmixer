@@ -89,12 +89,14 @@ int main(void)
 
 		if(dis>=10 && dis<20)
 		{
-			soundpath =soundpath1;  
+			//soundpath =soundpath1;
+			auto p=Popen({"omxplayer","-o","local","DesiJourney.wav"},output{PIPE},input{PIPE});
 			flag =1;                
 		}
 		else if( dis>=20 && dis<30)
 		{
-			soundpath =soundpath2;
+			//soundpath =soundpath2;
+			auto p=Popen({"omxplayer","-o","local","doublebass.wav"},output{PIPE},input{PIPE});
 			flag =2;
 		}
 		else if( dis>=30 &&dis<40)
@@ -131,7 +133,12 @@ int main(void)
 			{
 				oldflag =flag;
 				kill(pid,9);
-				
+				//
+				const char* msg = "q";
+				p.send(msg, strlen(msg));
+				auto res = p.communicate(nullptr, 0);
+				std::cout << res.first.buf.data() << std::endl;
+				//
 				
 				if(flag>0)
 				{
