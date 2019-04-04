@@ -101,7 +101,8 @@ int main(void)
 		}
 		else if( dis>=30 &&dis<40)
 		{
-			soundpath =soundpath3;
+			auto p=Popen({"omxplayer","-o","local","MoodyLoop.wav"},output{PIPE},input{PIPE});
+			//soundpath =soundpath3;
 			flag =3;
 		}
 		else                    
