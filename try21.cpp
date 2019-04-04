@@ -81,6 +81,8 @@ int main(void)
 	pid_t pid =-10;  
         //autofile();      
 	char *soundpath;
+	//char *oldpath;
+	
 
 	while(1)
 	{
@@ -89,20 +91,36 @@ int main(void)
 
 		if(dis>=10 && dis<20)
 		{
-			//soundpath =soundpath1;
-			auto p=Popen({"omxplayer","-o","local","DesiJourney.wav"},output{PIPE},input{PIPE});
-			flag =1;                
+			soundpath =soundpath1;
+			//oldpath =soundpath1;
+			auto p=Popen({"omxplayer","-o","local",soundpath},output{PIPE},input{PIPE});
+			flag =1;
+			while(flag)
+			{
+			dis = disMeasure();
+			printf("distance = %0.2f cm\n",dis);
+			if(dis<10 && dis>=20 && dis<40)
+			{
+				const char* msg = "q";
+				p.send(msg, strlen(msg));
+				auto res = p.communicate(nullptr, 0);
+				std::cout << res.first.buf.data() << std::endl;
+				flag =0;
+			}
+			}
 		}
 		else if( dis>=20 && dis<30)
 		{
-			//soundpath =soundpath2;
-			auto p=Popen({"omxplayer","-o","local","doublebass.wav"},output{PIPE},input{PIPE});
+			soundpath =soundpath2;
+			//oldpath =soundpath2;
+			auto p=Popen({"omxplayer","-o","local",soundpath},output{PIPE},input{PIPE});
 			flag =2;
 		}
 		else if( dis>=30 &&dis<40)
 		{
-			auto p=Popen({"omxplayer","-o","local","MoodyLoop.wav"},output{PIPE},input{PIPE});
-			//soundpath =soundpath3;
+			soundpath =soundpath3;
+			//oldpath =soundpath3;
+			auto p=Popen({"omxplayer","-o","local",soundpath},output{PIPE},input{PIPE});
 			flag =3;
 		}
 		else                    
