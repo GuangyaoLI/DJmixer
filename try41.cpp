@@ -15,8 +15,14 @@
 using namespace std;
 using namespace subprocess;
 
-#define Trig  9
-#define Echo  8
+#define Trig1  9
+#define Echo1  8
+#define Trig2  2
+#define Echo2  0
+#define Trig3  13
+#define Echo3  12
+#define Trig4  11
+#define Echo4  10
 
 int flag =-1;  
 
@@ -27,11 +33,17 @@ char soundpath3[] ="MoodyLoop.wav";
 
 void ultraInit(void)
 {
-	pinMode(Echo, INPUT);
-	pinMode(Trig, OUTPUT);
+	pinMode(Echo1, INPUT);
+	pinMode(Trig1, OUTPUT);
+	pinMode(Echo2, INPUT);
+	pinMode(Trig2, OUTPUT);
+	pinMode(Echo3, INPUT);
+	pinMode(Trig3, OUTPUT);
+	pinMode(Echo4, INPUT);
+	pinMode(Trig4, OUTPUT);
 }
 
-float disMeasure(void)
+float disMeasure(int Trig, int Echo)
 {
 	struct timeval tv1;
 	struct timeval tv2;
@@ -63,7 +75,7 @@ float disMeasure(void)
 int main(void)
 {
 	
-	float dis;
+	float dis1;
 	
 	wiringPiSetup();
 
@@ -80,8 +92,9 @@ int main(void)
 
 	while(1)
 	{
-		dis = disMeasure();
-		printf("distance = %0.2f cm\n",dis);
+		dis = disMeasure(Trig1,Echo1);
+		//printf("distance = %0.2f cm\n",dis);
+		cout << "distance = " << dis << " cm." << endl;
 
 		if(dis>=10 && dis<20)
 		{
@@ -90,9 +103,10 @@ int main(void)
 			flag =1;
 			while(flag)
 			{
-				dis = disMeasure();
-				printf("distance = %0.2f cm\n",dis);
-				if(dis>=20 && dis<40)
+				dis = disMeasure(Trig1,Echo1);
+				//printf("distance = %0.2f cm\n",dis1);
+				cout << "distance1 = " << dis1 << " cm." << endl;
+				if(dis1>=20 && dis1<40)
 				{
 					const char* msg = "q";
 					p.send(msg, strlen(msg));
