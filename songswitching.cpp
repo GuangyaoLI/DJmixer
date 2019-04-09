@@ -2,7 +2,7 @@
 #include <wiringPi.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include <unistd.h> 
+#include <unistd.h>
 
 #include <sys/time.h>
 #include <sys/types.h>
@@ -11,18 +11,21 @@
 #include <sys/wait.h>
 #include <sys/types.h>
 
+#include <linux/input.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 
 using namespace std;
 
-#define Trig  8//0
-#define Echo  9//1
+#define Trig  9//0
+#define Echo  8//1
 
-int flag =-1,  
-int oldflag =-1,  
+int flag =-1;
+int oldflag =-1;
 
-char soundpath1[] ="play /DJmixer/DesiJourney.wav"; 
-char soundpath2[] ="play /DJmixer/doublebass.wav";
-char soundpath3[] ="play /DJmixer/MoodyLoop.wav";
+char soundpath1[] ="DesiJourney.wav";
+char soundpath2[] ="doublebass.wav";
+char soundpath3[] ="MoodyLoop.wav";
 
 
 
@@ -65,30 +68,35 @@ float disMeasure(void)
 
 int main(void)
 {
+	//
+	FILE *in;
+	char buff[1024];
+	//
 	float dis;
+
 	wiringPiSetup();
 
 	if(wiringPiSetup() == -1)
 	{
-		printf("setuo wiringPi failed !");
+		cout << "setup wiringPi failed "  << endl;
 		return 1;
 	}
 
 	ultraInit();
 
-	pid_t pid =-10;  
-	autofile();      
+	pid_t pid =-10;
+        //autofile();
 	char *soundpath;
 
 	while(1)
 	{
 		dis = disMeasure();
-		printf("distance = %0.2f cm\n",dis);
+	cout << "distance = " << tid<<"cm \n" << endl;
 
 		if(dis>=10 && dis<20)
 		{
-			soundpath =soundpath1;  
-			flag =1;                
+			soundpath =soundpath1;
+			flag =1;
 		}
 		else if( dis>=20 && dis<30)
 		{
@@ -100,23 +108,23 @@ int main(void)
 			soundpath =soundpath3;
 			flag =3;
 		}
-		else                    
+		else
 		{
 			soundpath =NULL;
 			flag =0;
 		}
-		
+
 		if(oldflag <=0)
 		{
 			oldflag=flag;
 			if(flag>0)
 			{
 				pid =fork();
-				if(pid==0)  
+				if(pid==0)
 				{
 					close(0);
-					printf(soundpath);
-					execve(soundpath);
+					cout << soundpath << endl;
+					execlp("/usr/bin/omxplayer","omxplayer", "-o", "local", soundpath,NULL);
 					perror("error");
 					exit(0);
 				}
@@ -124,27 +132,55 @@ int main(void)
 		}
 		else
 		{
-			if(oldflag!=flag) 
+			if(oldflag!=flag)
 			{
 				oldflag =flag;
 				kill(pid,9);
+				//
+				int fd_kb;
+				fd_kb = open("/dev/input/event0",O_RDWR);
+				struct input_event event;
+				event.code=KEY_Q;
+				event.type=EV_KEY;
+				event.value=1;
+				gettimeofday(&event.time,0);
+				if(write(fd_kb,&event,sizeof(event))!=sizeof(event))
+				{
+					cout << "write /dev/input/event0 failed/n" << endl;
+					// printf("write /dev/input/event0 failed/n");
+				}
+				event.value=0;
+				if(write(fd_kb,&event,sizeof(event))!=sizeof(event))
+				{
+					cout << "write /dev/input/event0 failed/n" << endl;
+					// printf("write /dev/input/event0 failed/n");
+				}
+				//
+				/*
+				if(!(in = popen("soundpath","w"))){
+					return 1;
+				}
+				char buffer[] = "q\n";
+				fwirte(buffer,sizeof(char),sizeof(buffer),in);
+				fflush(in);
+				*/
 				if(flag>0)
 				{
 					pid=fork();
 					if(pid ==0)
 					{
 						close(0);
-						printf(soundpath);
-						execve(soundpath);
+						cout << soundpath << endl;
+						execlp("/usr/bin/omxplayer","omxplayer", "-o", "local", soundpath,NULL);
 						perror("error");
 						exit(0);
 					}
 				}
 			}
 		}
-	
+
 		delay(1000);
-		
+
 	}
 	return 0;
 }

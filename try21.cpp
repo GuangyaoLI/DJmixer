@@ -1,7 +1,7 @@
 #include <wiringPi.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include <unistd.h> 
+#include <unistd.h>
 
 #include <sys/time.h>
 #include <sys/types.h>
@@ -18,13 +18,12 @@ using namespace subprocess;
 #define Trig  9
 #define Echo  8
 
-int flag =-1;  
-<<<<<<< HEAD
-//int oldflag =-1;
-=======
->>>>>>> 80e4e96549802c45e39f7fa92e382a36526637c3
+int flag =-1;
 
-char soundpath1[] ="DesiJourney.wav"; 
+//int oldflag =-1;
+
+
+char soundpath1[] ="DesiJourney.wav";
 char soundpath2[] ="doublebass.wav";
 char soundpath3[] ="MoodyLoop.wav";
 
@@ -61,7 +60,7 @@ float disMeasure(void)
 	dis = (float)(stop - start) / 1000000 * 34000 / 2;
 
 	//
-	delay(1000);
+	//delay(1000);
 	//
 	return dis;
 }
@@ -69,9 +68,9 @@ float disMeasure(void)
 
 int main(void)
 {
-	
+
 	float dis;
-	
+
 	wiringPiSetup();
 
 	if(wiringPiSetup() == -1)
@@ -79,19 +78,19 @@ int main(void)
 		printf("setuo wiringPi failed !");
 		return 1;
 	}
-	
-	ultraInit();
-<<<<<<< HEAD
 
-	//pid_t pid =-10;  
-        //autofile();      
+	ultraInit();
+
+
+	//pid_t pid =-10;
+        //autofile();
 	char *soundpath;
 	//char *oldpath;
-=======
-     
+
+
 	char *soundpath;
->>>>>>> 80e4e96549802c45e39f7fa92e382a36526637c3
-	
+
+
 
 	while(1)
 	{
@@ -101,15 +100,14 @@ int main(void)
 		if(dis>=10 && dis<20)
 		{
 			soundpath =soundpath1;
-<<<<<<< HEAD
+
 			//oldpath =soundpath1;
-=======
->>>>>>> 80e4e96549802c45e39f7fa92e382a36526637c3
+
 			auto p=Popen({"omxplayer","-o","local",soundpath},output{PIPE},input{PIPE});
 			flag =1;
 			while(flag)
 			{
-<<<<<<< HEAD
+
 			dis = disMeasure();
 			printf("distance = %0.2f cm\n",dis);
 			if(dis>=20 && dis<40)
@@ -121,7 +119,7 @@ int main(void)
 				flag =0;
 			}
 			//delay(500);
-=======
+
 				dis = disMeasure();
 				printf("distance = %0.2f cm\n",dis);
 				if(dis>=20 && dis<40)
@@ -133,13 +131,13 @@ int main(void)
 					flag =0;
 				}
 				delay(1000);
->>>>>>> 80e4e96549802c45e39f7fa92e382a36526637c3
+
 			}
 		}
 		else if( dis>=20 && dis<30)
 		{
 			soundpath =soundpath2;
-<<<<<<< HEAD
+
 			//oldpath =soundpath2;
 			auto p=Popen({"omxplayer","-o","local",soundpath},output{PIPE},input{PIPE});
 			flag =1;
@@ -179,12 +177,12 @@ int main(void)
 			//delay(500);
 			}
 		}
-		/*else                    
+		/*else
 		{
 			soundpath =NULL;
 			flag =0;
 		}*/
-		
+
 		/*if(oldflag <=0)
 		{
 			oldflag=flag;
@@ -229,13 +227,12 @@ int main(void)
 			}
 <<<<<<< HEAD
 		}*/
-	
+
 		//delay(500);
-=======
 		}
 		delay(1000);
->>>>>>> 80e4e96549802c45e39f7fa92e382a36526637c3
-		
+
+
 	}
 	return 0;
 }

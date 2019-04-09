@@ -21,8 +21,8 @@ void *PrintHello1(void *threadid)
 {
    // 对传入的参数进行强制类型转换，由无类型指针变为整形数指针，然后再读取
    int tid = *((int*)threadid);
-   
-   execlp("/usr/bin/omxplayer","omxplayer", "-o", "local", "MoodyLoop.wav",NULL);
+
+   execlp("/usr/bin/mpv","mpv", "MoodyLoop.wav",NULL);
    cout << "Hello Runoob! 线程 ID, " << tid << endl;
    pthread_exit(NULL);
 }
