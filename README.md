@@ -10,11 +10,14 @@
 * keyboard and mouse(optional)
 ```
 ## Video Demo
-
+[![Everything Is AWESOME](  http://img.youtube.com/vi/7w9ATuSODwc/maxresdefault.jpg)](https://www.youtube.com/watch?v=7w9ATuSODwc "Everything Is AWESOME")
 ## Software  Usage
 
 ## Circuit Design
 
 ## PCB Design
 
+## social media
+Twitter  https://twitter.com/UofGd?lang=en
+hackaday io https://hackaday.io/project/164857-djmixer
 DJ mixer based on ultrasonic sensor_by Xiangrui Xu, Rui Zhang, Guangyao Li
