@@ -10,7 +10,7 @@
 * keyboard and mouse(optional)
 ```
 ## Video Demo
-[![Everything Is AWESOME](  http://img.youtube.com/vi/7w9ATuSODwc/maxresdefault.jpg)](https://www.youtube.com/watch?v=7w9ATuSODwc "Everything Is AWESOME")
+[![Everything Is AWESOME](  http://img.youtube.com/vi/wFj2qqwLuvs/maxresdefault.jpg)](https://www.youtube.com/watch?v=7w9ATuSODwc "Everything Is AWESOME")
 ## Software  Usage
 
 ## Circuit Design
