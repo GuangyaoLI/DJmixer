@@ -1,0 +1,56 @@
+\hypertarget{structsubprocess_1_1detail_1_1ArgumentDeducer}{}\section{subprocess\+:\+:detail\+:\+:Argument\+Deducer Struct Reference}
+\label{structsubprocess_1_1detail_1_1ArgumentDeducer}\index{subprocess\+::detail\+::\+Argument\+Deducer@{subprocess\+::detail\+::\+Argument\+Deducer}}
+
+
+{\ttfamily \#include $<$subprocess.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structsubprocess_1_1detail_1_1ArgumentDeducer_abb82c9c0353424d16cc4559b6e1920f4}\label{structsubprocess_1_1detail_1_1ArgumentDeducer_abb82c9c0353424d16cc4559b6e1920f4}} 
+{\bfseries Argument\+Deducer} (\hyperlink{classsubprocess_1_1Popen}{Popen} $\ast$p)
+\item 
+\mbox{\Hypertarget{structsubprocess_1_1detail_1_1ArgumentDeducer_a91f839e8d405dfa79d1a4a78d2fa05ef}\label{structsubprocess_1_1detail_1_1ArgumentDeducer_a91f839e8d405dfa79d1a4a78d2fa05ef}} 
+void {\bfseries set\+\_\+option} (\hyperlink{structsubprocess_1_1executable}{executable} \&\&exe)
+\item 
+\mbox{\Hypertarget{structsubprocess_1_1detail_1_1ArgumentDeducer_a09ee00861b40084d9430f9e3eb2ab66f}\label{structsubprocess_1_1detail_1_1ArgumentDeducer_a09ee00861b40084d9430f9e3eb2ab66f}} 
+void {\bfseries set\+\_\+option} (\hyperlink{structsubprocess_1_1cwd}{cwd} \&\&cwdir)
+\item 
+\mbox{\Hypertarget{structsubprocess_1_1detail_1_1ArgumentDeducer_ac0bfccf003b6c760adfd0cce49b863ed}\label{structsubprocess_1_1detail_1_1ArgumentDeducer_ac0bfccf003b6c760adfd0cce49b863ed}} 
+void {\bfseries set\+\_\+option} (\hyperlink{structsubprocess_1_1bufsize}{bufsize} \&\&bsiz)
+\item 
+\mbox{\Hypertarget{structsubprocess_1_1detail_1_1ArgumentDeducer_af7cd8a9ca886684a5a9440a639f6c13c}\label{structsubprocess_1_1detail_1_1ArgumentDeducer_af7cd8a9ca886684a5a9440a639f6c13c}} 
+void {\bfseries set\+\_\+option} (\hyperlink{structsubprocess_1_1environment}{environment} \&\&env)
+\item 
+\mbox{\Hypertarget{structsubprocess_1_1detail_1_1ArgumentDeducer_a57986f237840cd7ac300640d4ae18290}\label{structsubprocess_1_1detail_1_1ArgumentDeducer_a57986f237840cd7ac300640d4ae18290}} 
+void {\bfseries set\+\_\+option} (\hyperlink{structsubprocess_1_1defer__spawn}{defer\+\_\+spawn} \&\&defer)
+\item 
+\mbox{\Hypertarget{structsubprocess_1_1detail_1_1ArgumentDeducer_a19713166253d051b544b9074fe0b2927}\label{structsubprocess_1_1detail_1_1ArgumentDeducer_a19713166253d051b544b9074fe0b2927}} 
+void {\bfseries set\+\_\+option} (\hyperlink{structsubprocess_1_1shell}{shell} \&\&sh)
+\item 
+\mbox{\Hypertarget{structsubprocess_1_1detail_1_1ArgumentDeducer_adf623faeac02bb0597cd520c7434af21}\label{structsubprocess_1_1detail_1_1ArgumentDeducer_adf623faeac02bb0597cd520c7434af21}} 
+void {\bfseries set\+\_\+option} (\hyperlink{structsubprocess_1_1input}{input} \&\&inp)
+\item 
+\mbox{\Hypertarget{structsubprocess_1_1detail_1_1ArgumentDeducer_a07566b83561f598e4b48ed19c3f3d165}\label{structsubprocess_1_1detail_1_1ArgumentDeducer_a07566b83561f598e4b48ed19c3f3d165}} 
+void {\bfseries set\+\_\+option} (\hyperlink{structsubprocess_1_1output}{output} \&\&out)
+\item 
+\mbox{\Hypertarget{structsubprocess_1_1detail_1_1ArgumentDeducer_a17c8abcd9680472fbbc0459ff594f30e}\label{structsubprocess_1_1detail_1_1ArgumentDeducer_a17c8abcd9680472fbbc0459ff594f30e}} 
+void {\bfseries set\+\_\+option} (\hyperlink{structsubprocess_1_1error}{error} \&\&err)
+\item 
+\mbox{\Hypertarget{structsubprocess_1_1detail_1_1ArgumentDeducer_afae19ddffec846c8ce3147465e0cd439}\label{structsubprocess_1_1detail_1_1ArgumentDeducer_afae19ddffec846c8ce3147465e0cd439}} 
+void {\bfseries set\+\_\+option} (\hyperlink{structsubprocess_1_1close__fds}{close\+\_\+fds} \&\&cfds)
+\item 
+\mbox{\Hypertarget{structsubprocess_1_1detail_1_1ArgumentDeducer_abddc5d25affe64e7fb09e24607e07fb8}\label{structsubprocess_1_1detail_1_1ArgumentDeducer_abddc5d25affe64e7fb09e24607e07fb8}} 
+void {\bfseries set\+\_\+option} (\hyperlink{classsubprocess_1_1preexec__func}{preexec\+\_\+func} \&\&prefunc)
+\item 
+\mbox{\Hypertarget{structsubprocess_1_1detail_1_1ArgumentDeducer_af1a268113c7212b740e7b324100d3ad0}\label{structsubprocess_1_1detail_1_1ArgumentDeducer_af1a268113c7212b740e7b324100d3ad0}} 
+void {\bfseries set\+\_\+option} (\hyperlink{structsubprocess_1_1session__leader}{session\+\_\+leader} \&\&sleader)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A helper class to \hyperlink{classsubprocess_1_1Popen}{Popen} class for setting options as provided in the \hyperlink{classsubprocess_1_1Popen}{Popen} constructor or in check\+\_\+ouput arguments. This design allows us to {\itshape not} have any fixed position to any arguments and specify them in a way similar to what can be done in python. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+subprocess.\+hpp\end{DoxyCompactItemize}

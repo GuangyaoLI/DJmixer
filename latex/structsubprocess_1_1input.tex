@@ -1,0 +1,45 @@
+\hypertarget{structsubprocess_1_1input}{}\section{subprocess\+:\+:input Struct Reference}
+\label{structsubprocess_1_1input}\index{subprocess\+::input@{subprocess\+::input}}
+
+
+{\ttfamily \#include $<$subprocess.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structsubprocess_1_1input_ab89e2b0059371939d0bdd8c3c880b44a}\label{structsubprocess_1_1input_ab89e2b0059371939d0bdd8c3c880b44a}} 
+{\bfseries input} (int fd)
+\item 
+\mbox{\Hypertarget{structsubprocess_1_1input_a8f37206d741d5c78af362463b8aceeee}\label{structsubprocess_1_1input_a8f37206d741d5c78af362463b8aceeee}} 
+{\bfseries input} (F\+I\+LE $\ast$fp)
+\item 
+\mbox{\Hypertarget{structsubprocess_1_1input_a7162f3da7aa3657348aff97441cd748c}\label{structsubprocess_1_1input_a7162f3da7aa3657348aff97441cd748c}} 
+{\bfseries input} (const char $\ast$filename)
+\item 
+\mbox{\Hypertarget{structsubprocess_1_1input_a78c5a72973cf9cc696e5d30caa86f53b}\label{structsubprocess_1_1input_a78c5a72973cf9cc696e5d30caa86f53b}} 
+{\bfseries input} (\hyperlink{namespacesubprocess_a8c21131feb99bed9ffa644851ff499ed}{I\+O\+T\+Y\+PE} typ)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structsubprocess_1_1input_a3b571a86a9b1001f46a7dd817db2bbf4}\label{structsubprocess_1_1input_a3b571a86a9b1001f46a7dd817db2bbf4}} 
+int {\bfseries rd\+\_\+ch\+\_\+} = -\/1
+\item 
+\mbox{\Hypertarget{structsubprocess_1_1input_a973c2f79b599528217461350782b58f5}\label{structsubprocess_1_1input_a973c2f79b599528217461350782b58f5}} 
+int {\bfseries wr\+\_\+ch\+\_\+} = -\/1
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Option to specify the input channel for the child process. It can be\+:
+\begin{DoxyEnumerate}
+\item An already open file descriptor.
+\item A file name.
+\item I\+O\+T\+Y\+PE. Usuall a P\+I\+PE
+\end{DoxyEnumerate}
+
+Eg\+: input\{P\+I\+PE\} OR in case of redirection, output of another \hyperlink{classsubprocess_1_1Popen}{Popen} input\{popen.\+output()\} 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+subprocess.\+hpp\end{DoxyCompactItemize}

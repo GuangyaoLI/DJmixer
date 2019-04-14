@@ -1,0 +1,109 @@
+\hypertarget{classsubprocess_1_1Popen}{}\section{subprocess\+:\+:Popen Class Reference}
+\label{classsubprocess_1_1Popen}\index{subprocess\+::\+Popen@{subprocess\+::\+Popen}}
+
+
+{\ttfamily \#include $<$subprocess.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1Popen_ae711851250d87fe74a21cab8f45f877e}\label{classsubprocess_1_1Popen_ae711851250d87fe74a21cab8f45f877e}} 
+{\footnotesize template$<$typename... Args$>$ }\\{\bfseries Popen} (const std\+::string \&cmd\+\_\+args, Args \&\&...args)
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1Popen_a6e1abcc106ea93b1c54a81dbea169de0}\label{classsubprocess_1_1Popen_a6e1abcc106ea93b1c54a81dbea169de0}} 
+{\footnotesize template$<$typename... Args$>$ }\\{\bfseries Popen} (std\+::initializer\+\_\+list$<$ const char $\ast$$>$ cmd\+\_\+args, Args \&\&...args)
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1Popen_ac571c78a0364eacb0b2e20fed2629531}\label{classsubprocess_1_1Popen_ac571c78a0364eacb0b2e20fed2629531}} 
+void {\bfseries start\+\_\+process} () noexcept(false)
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1Popen_a9ed4bd65e9ea75c6e6577966d00acf62}\label{classsubprocess_1_1Popen_a9ed4bd65e9ea75c6e6577966d00acf62}} 
+int {\bfseries pid} () const noexcept
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1Popen_aca0573a1e2928bd516b94a0b940a058c}\label{classsubprocess_1_1Popen_aca0573a1e2928bd516b94a0b940a058c}} 
+int {\bfseries retcode} () const noexcept
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1Popen_aea2bb56549420a2e2bd1877aa58e9841}\label{classsubprocess_1_1Popen_aea2bb56549420a2e2bd1877aa58e9841}} 
+int {\bfseries wait} () noexcept(false)
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1Popen_afc1ab51f48d844534e04886336e51003}\label{classsubprocess_1_1Popen_afc1ab51f48d844534e04886336e51003}} 
+int {\bfseries poll} () noexcept(false)
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1Popen_a6e22fccca80f2c9ccdbe52315a12dc6a}\label{classsubprocess_1_1Popen_a6e22fccca80f2c9ccdbe52315a12dc6a}} 
+void {\bfseries kill} (int sig\+\_\+num=9)
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1Popen_a3b7b201574cf638dfca8662393823ed8}\label{classsubprocess_1_1Popen_a3b7b201574cf638dfca8662393823ed8}} 
+void {\bfseries set\+\_\+out\+\_\+buf\+\_\+cap} (size\+\_\+t cap)
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1Popen_af32fd97704fe39d1bcac177e2f87f6d5}\label{classsubprocess_1_1Popen_af32fd97704fe39d1bcac177e2f87f6d5}} 
+void {\bfseries set\+\_\+err\+\_\+buf\+\_\+cap} (size\+\_\+t cap)
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1Popen_af7022808d58227377e167a63ae28c362}\label{classsubprocess_1_1Popen_af7022808d58227377e167a63ae28c362}} 
+int {\bfseries send} (const char $\ast$msg, size\+\_\+t length)
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1Popen_a8302bb24e21c0fd2911a306d0c420032}\label{classsubprocess_1_1Popen_a8302bb24e21c0fd2911a306d0c420032}} 
+int {\bfseries send} (const std\+::vector$<$ char $>$ \&msg)
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1Popen_a8072d22cb60bf6e5fc70e7e324f809fb}\label{classsubprocess_1_1Popen_a8072d22cb60bf6e5fc70e7e324f809fb}} 
+std\+::pair$<$ \hyperlink{classsubprocess_1_1Buffer}{Out\+Buffer}, \hyperlink{classsubprocess_1_1Buffer}{Err\+Buffer} $>$ {\bfseries communicate} (const char $\ast$msg, size\+\_\+t length)
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1Popen_a37c4c58aa3c93f78e97d41ed7698ecd9}\label{classsubprocess_1_1Popen_a37c4c58aa3c93f78e97d41ed7698ecd9}} 
+std\+::pair$<$ \hyperlink{classsubprocess_1_1Buffer}{Out\+Buffer}, \hyperlink{classsubprocess_1_1Buffer}{Err\+Buffer} $>$ {\bfseries communicate} (const std\+::vector$<$ char $>$ \&msg)
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1Popen_a9d7c332dc15bcf73aa05a2797c01f9f5}\label{classsubprocess_1_1Popen_a9d7c332dc15bcf73aa05a2797c01f9f5}} 
+std\+::pair$<$ \hyperlink{classsubprocess_1_1Buffer}{Out\+Buffer}, \hyperlink{classsubprocess_1_1Buffer}{Err\+Buffer} $>$ {\bfseries communicate} ()
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1Popen_ada5ed42edd5ea9ebe230e714bb9cbf56}\label{classsubprocess_1_1Popen_ada5ed42edd5ea9ebe230e714bb9cbf56}} 
+F\+I\+LE $\ast$ {\bfseries input} ()
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1Popen_a4505ffc5b74461dfb2b5178cbd766ee4}\label{classsubprocess_1_1Popen_a4505ffc5b74461dfb2b5178cbd766ee4}} 
+F\+I\+LE $\ast$ {\bfseries output} ()
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1Popen_ae40f49332562cf845bb071aedd4f06ea}\label{classsubprocess_1_1Popen_ae40f49332562cf845bb071aedd4f06ea}} 
+F\+I\+LE $\ast$ {\bfseries error} ()
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1Popen_a5dc68268f52e0c9163aea99a49a750d0}\label{classsubprocess_1_1Popen_a5dc68268f52e0c9163aea99a49a750d0}} 
+void \hyperlink{classsubprocess_1_1Popen_a5dc68268f52e0c9163aea99a49a750d0}{close\+\_\+input} ()
+\begin{DoxyCompactList}\small\item\em Stream close A\+P\+Is. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsubprocess_1_1Popen_a5ebcfe13c9158854c9569eea991381e0}\label{classsubprocess_1_1Popen_a5ebcfe13c9158854c9569eea991381e0}} 
+void {\bfseries close\+\_\+output} ()
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1Popen_ad5ea6ecbe51d0b43b960c0256ac0fd13}\label{classsubprocess_1_1Popen_ad5ea6ecbe51d0b43b960c0256ac0fd13}} 
+void {\bfseries close\+\_\+error} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1Popen_a5be687d0a7fae803059e799139a44868}\label{classsubprocess_1_1Popen_a5be687d0a7fae803059e799139a44868}} 
+struct {\bfseries detail\+::\+Argument\+Deducer}
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1Popen_a4b6e6e3c262ff49cedf0a1e5a1159f9c}\label{classsubprocess_1_1Popen_a4b6e6e3c262ff49cedf0a1e5a1159f9c}} 
+class {\bfseries detail\+::\+Child}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class\+: \hyperlink{classsubprocess_1_1Popen}{Popen} This is the single most important class in the whole library and glues together all the helper classes to provide a common interface to the client.
+
+A\+PI\textquotesingle{}s provided by the class\+:
+\begin{DoxyEnumerate}
+\item \hyperlink{classsubprocess_1_1Popen}{Popen}(\{\char`\"{}cmd\char`\"{}\}, output\{..\}, error\{..\}, cwd\{..\}, ....) Command provided as a sequence.
+\item \hyperlink{classsubprocess_1_1Popen}{Popen}(\char`\"{}cmd arg1\char`\"{}m output\{..\}, error\{..\}, cwd\{..\}, ....) Command provided in a single string.
+\item wait() -\/ Wait for the child to exit.
+\item retcode() -\/ The return code of the exited child.
+\item pid() -\/ P\+ID of the spawned child.
+\item poll() -\/ Check the status of the running child.
+\item kill(sig\+\_\+num) -\/ Kill the child. S\+I\+G\+T\+E\+RM used by default.
+\item send(...) -\/ Send input to the input channel of the child.
+\item communicate(...) -\/ Get the output/error from the child and close the channels from the parent side.
+\end{DoxyEnumerate}
+
+input() -\/ Get the input channel/\+File pointer. Can be used for cutomizing the way of sending input to child.
+\begin{DoxyEnumerate}
+\item output() -\/ Get the output channel/\+File pointer. Usually used in case of redirection. See piping examples.
+\item error() -\/ Get the error channel/\+File poiner. Usually used in case of redirection.
+\item start\+\_\+process() -\/ Start the child process. Only to be used when {\ttfamily \hyperlink{structsubprocess_1_1defer__spawn}{defer\+\_\+spawn}} option was provided in \hyperlink{classsubprocess_1_1Popen}{Popen} constructor. 
+\end{DoxyEnumerate}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+subprocess.\+hpp\end{DoxyCompactItemize}

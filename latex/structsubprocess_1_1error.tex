@@ -1,0 +1,46 @@
+\hypertarget{structsubprocess_1_1error}{}\section{subprocess\+:\+:error Struct Reference}
+\label{structsubprocess_1_1error}\index{subprocess\+::error@{subprocess\+::error}}
+
+
+{\ttfamily \#include $<$subprocess.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structsubprocess_1_1error_abe27038da21efe616511f569719351a9}\label{structsubprocess_1_1error_abe27038da21efe616511f569719351a9}} 
+{\bfseries error} (int fd)
+\item 
+\mbox{\Hypertarget{structsubprocess_1_1error_a3a253a99366cd7c013113252d14f5d11}\label{structsubprocess_1_1error_a3a253a99366cd7c013113252d14f5d11}} 
+{\bfseries error} (F\+I\+LE $\ast$fp)
+\item 
+\mbox{\Hypertarget{structsubprocess_1_1error_ae8c5982feaface3d0cac81b67230b98f}\label{structsubprocess_1_1error_ae8c5982feaface3d0cac81b67230b98f}} 
+{\bfseries error} (const char $\ast$filename)
+\item 
+\mbox{\Hypertarget{structsubprocess_1_1error_ab15605f08b33290b2eb9d6c32e368beb}\label{structsubprocess_1_1error_ab15605f08b33290b2eb9d6c32e368beb}} 
+{\bfseries error} (\hyperlink{namespacesubprocess_a8c21131feb99bed9ffa644851ff499ed}{I\+O\+T\+Y\+PE} typ)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structsubprocess_1_1error_a7538e30cd5c962898ce1061ce5a6da87}\label{structsubprocess_1_1error_a7538e30cd5c962898ce1061ce5a6da87}} 
+bool {\bfseries deferred\+\_\+} = false
+\item 
+\mbox{\Hypertarget{structsubprocess_1_1error_aef933354c0ef2c5c7f0bc53e9b80b624}\label{structsubprocess_1_1error_aef933354c0ef2c5c7f0bc53e9b80b624}} 
+int {\bfseries rd\+\_\+ch\+\_\+} = -\/1
+\item 
+\mbox{\Hypertarget{structsubprocess_1_1error_aeb8d713bd58af5bacd5454f0eefdff64}\label{structsubprocess_1_1error_aeb8d713bd58af5bacd5454f0eefdff64}} 
+int {\bfseries wr\+\_\+ch\+\_\+} = -\/1
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Option to specify the error channel for the child process. It can be\+:
+\begin{DoxyEnumerate}
+\item An already open file descriptor.
+\item A file name.
+\item I\+O\+T\+Y\+PE. Usually a P\+I\+PE or S\+T\+D\+O\+UT 
+\end{DoxyEnumerate}
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+subprocess.\+hpp\end{DoxyCompactItemize}

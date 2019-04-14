@@ -1,0 +1,101 @@
+\hypertarget{classsubprocess_1_1detail_1_1Streams}{}\section{subprocess\+:\+:detail\+:\+:Streams Class Reference}
+\label{classsubprocess_1_1detail_1_1Streams}\index{subprocess\+::detail\+::\+Streams@{subprocess\+::detail\+::\+Streams}}
+
+
+{\ttfamily \#include $<$subprocess.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Streams_a4778d731dd11319748d54558cec7c597}\label{classsubprocess_1_1detail_1_1Streams_a4778d731dd11319748d54558cec7c597}} 
+void {\bfseries operator=} (const \hyperlink{classsubprocess_1_1detail_1_1Streams}{Streams} \&)=delete
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Streams_a34854f7864ff24ba9a6950ce5350c789}\label{classsubprocess_1_1detail_1_1Streams_a34854f7864ff24ba9a6950ce5350c789}} 
+void {\bfseries setup\+\_\+comm\+\_\+channels} ()
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Streams_a820c3a9f1f97d2143ecc5fdb5843c6ce}\label{classsubprocess_1_1detail_1_1Streams_a820c3a9f1f97d2143ecc5fdb5843c6ce}} 
+void {\bfseries cleanup\+\_\+fds} ()
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Streams_ab1da9aa8c58cd38acbc6e8d8336d1378}\label{classsubprocess_1_1detail_1_1Streams_ab1da9aa8c58cd38acbc6e8d8336d1378}} 
+void {\bfseries close\+\_\+parent\+\_\+fds} ()
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Streams_a2e454392653a7e9c65d476fab5e52318}\label{classsubprocess_1_1detail_1_1Streams_a2e454392653a7e9c65d476fab5e52318}} 
+void {\bfseries close\+\_\+child\+\_\+fds} ()
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Streams_a6c38d1101a5e8ab13f437545f8bddf15}\label{classsubprocess_1_1detail_1_1Streams_a6c38d1101a5e8ab13f437545f8bddf15}} 
+F\+I\+LE $\ast$ {\bfseries input} ()
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Streams_aa930cb9570f059967d6c0665965456cb}\label{classsubprocess_1_1detail_1_1Streams_aa930cb9570f059967d6c0665965456cb}} 
+F\+I\+LE $\ast$ {\bfseries output} ()
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Streams_a7fa6a4bf256d5a79808a51d77e93a070}\label{classsubprocess_1_1detail_1_1Streams_a7fa6a4bf256d5a79808a51d77e93a070}} 
+F\+I\+LE $\ast$ {\bfseries error} ()
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Streams_a6309a4382e5f553ccdbb86646b2edf2e}\label{classsubprocess_1_1detail_1_1Streams_a6309a4382e5f553ccdbb86646b2edf2e}} 
+void {\bfseries input} (F\+I\+LE $\ast$fp)
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Streams_af057a5301d763a38e0593da7b895a386}\label{classsubprocess_1_1detail_1_1Streams_af057a5301d763a38e0593da7b895a386}} 
+void {\bfseries output} (F\+I\+LE $\ast$fp)
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Streams_a139902096905553599251ff3c88196b2}\label{classsubprocess_1_1detail_1_1Streams_a139902096905553599251ff3c88196b2}} 
+void {\bfseries error} (F\+I\+LE $\ast$fp)
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Streams_a15f9bc130891faca96c895be6d9f14b6}\label{classsubprocess_1_1detail_1_1Streams_a15f9bc130891faca96c895be6d9f14b6}} 
+void {\bfseries set\+\_\+out\+\_\+buf\+\_\+cap} (size\+\_\+t cap)
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Streams_a4009b0b094dd757d7855112a342fe21a}\label{classsubprocess_1_1detail_1_1Streams_a4009b0b094dd757d7855112a342fe21a}} 
+void {\bfseries set\+\_\+err\+\_\+buf\+\_\+cap} (size\+\_\+t cap)
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Streams_ac14ae80f99f82b9a5c7fcf4751a263bf}\label{classsubprocess_1_1detail_1_1Streams_ac14ae80f99f82b9a5c7fcf4751a263bf}} 
+int {\bfseries send} (const char $\ast$msg, size\+\_\+t length)
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Streams_a0dcc7771d6f78d513c2618cc506581f0}\label{classsubprocess_1_1detail_1_1Streams_a0dcc7771d6f78d513c2618cc506581f0}} 
+int {\bfseries send} (const std\+::vector$<$ char $>$ \&msg)
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Streams_afd5efc8cdde937c4c8f64b59203546ef}\label{classsubprocess_1_1detail_1_1Streams_afd5efc8cdde937c4c8f64b59203546ef}} 
+std\+::pair$<$ \hyperlink{classsubprocess_1_1Buffer}{Out\+Buffer}, \hyperlink{classsubprocess_1_1Buffer}{Err\+Buffer} $>$ {\bfseries communicate} (const char $\ast$msg, size\+\_\+t length)
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Streams_ae144230818f582c3680a13540175121f}\label{classsubprocess_1_1detail_1_1Streams_ae144230818f582c3680a13540175121f}} 
+std\+::pair$<$ \hyperlink{classsubprocess_1_1Buffer}{Out\+Buffer}, \hyperlink{classsubprocess_1_1Buffer}{Err\+Buffer} $>$ {\bfseries communicate} (const std\+::vector$<$ char $>$ \&msg)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Streams_aea4fa1a8cb831261687c4a2744a9f24e}\label{classsubprocess_1_1detail_1_1Streams_aea4fa1a8cb831261687c4a2744a9f24e}} 
+std\+::shared\+\_\+ptr$<$ F\+I\+LE $>$ {\bfseries input\+\_\+} = nullptr
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Streams_a5cfb9fe7731efec85560c313f9ac6de8}\label{classsubprocess_1_1detail_1_1Streams_a5cfb9fe7731efec85560c313f9ac6de8}} 
+std\+::shared\+\_\+ptr$<$ F\+I\+LE $>$ {\bfseries output\+\_\+} = nullptr
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Streams_a67d61caca4c3b25a44f1e5bd6b69dd06}\label{classsubprocess_1_1detail_1_1Streams_a67d61caca4c3b25a44f1e5bd6b69dd06}} 
+std\+::shared\+\_\+ptr$<$ F\+I\+LE $>$ {\bfseries error\+\_\+} = nullptr
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Streams_a61b41130853c8b806f8d880ed87c6f66}\label{classsubprocess_1_1detail_1_1Streams_a61b41130853c8b806f8d880ed87c6f66}} 
+int {\bfseries bufsiz\+\_\+} = 0
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Streams_ac5b3b837e8f0b2ddc01231c9b3a60eec}\label{classsubprocess_1_1detail_1_1Streams_ac5b3b837e8f0b2ddc01231c9b3a60eec}} 
+int {\bfseries write\+\_\+to\+\_\+child\+\_\+} = -\/1
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Streams_ac57099c94684d23bf7131e822123ed05}\label{classsubprocess_1_1detail_1_1Streams_ac57099c94684d23bf7131e822123ed05}} 
+int {\bfseries read\+\_\+from\+\_\+parent\+\_\+} = -\/1
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Streams_ac8d36f16af4b3437b082b94174c5706b}\label{classsubprocess_1_1detail_1_1Streams_ac8d36f16af4b3437b082b94174c5706b}} 
+int {\bfseries write\+\_\+to\+\_\+parent\+\_\+} = -\/1
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Streams_a85917dc2b5b568b15ec0cd2c5b208678}\label{classsubprocess_1_1detail_1_1Streams_a85917dc2b5b568b15ec0cd2c5b208678}} 
+int {\bfseries read\+\_\+from\+\_\+child\+\_\+} = -\/1
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Streams_adff2cf35ebb10e8bc8ff39b55ff11564}\label{classsubprocess_1_1detail_1_1Streams_adff2cf35ebb10e8bc8ff39b55ff11564}} 
+int {\bfseries err\+\_\+write\+\_\+} = -\/1
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Streams_abd0cb3cdd4cf0fb72a89896a629bb902}\label{classsubprocess_1_1detail_1_1Streams_abd0cb3cdd4cf0fb72a89896a629bb902}} 
+int {\bfseries err\+\_\+read\+\_\+} = -\/1
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is a helper class to \hyperlink{classsubprocess_1_1Popen}{Popen}. It takes care of management of all the file descriptors and file pointers. It dispatches of the communication aspects to the \hyperlink{classsubprocess_1_1detail_1_1Communication}{Communication} class. Read through the data members to understand about the various file descriptors used. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+subprocess.\+hpp\end{DoxyCompactItemize}

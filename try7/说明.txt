@@ -1,2 +1,0 @@
-player是一个播放器，需要放在目录中，然后在SoundPlay中execf更改路径
-Program是Main函数文件

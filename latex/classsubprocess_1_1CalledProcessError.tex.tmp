@@ -1,0 +1,28 @@
+\hypertarget{classsubprocess_1_1CalledProcessError}{}\section{subprocess\+:\+:Called\+Process\+Error Class Reference}
+\label{classsubprocess_1_1CalledProcessError}\index{subprocess\+::\+Called\+Process\+Error@{subprocess\+::\+Called\+Process\+Error}}
+
+
+{\ttfamily \#include $<$subprocess.\+hpp$>$}
+
+
+
+Inheritance diagram for subprocess\+:\+:Called\+Process\+Error\+:
+% FIG 0
+
+
+Collaboration diagram for subprocess\+:\+:Called\+Process\+Error\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1CalledProcessError_a55570f627d87ffd79262c75ada8fc6c8}\label{classsubprocess_1_1CalledProcessError_a55570f627d87ffd79262c75ada8fc6c8}} 
+{\bfseries Called\+Process\+Error} (const std\+::string \&error\+\_\+msg)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class\+: \hyperlink{classsubprocess_1_1CalledProcessError}{Called\+Process\+Error} Thrown when there was error executing the command. Check \hyperlink{classsubprocess_1_1Popen}{Popen} class A\+PI\textquotesingle{}s to know when this exception can be thrown. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+subprocess.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,45 @@
+\hypertarget{structsubprocess_1_1output}{}\section{subprocess\+:\+:output Struct Reference}
+\label{structsubprocess_1_1output}\index{subprocess\+::output@{subprocess\+::output}}
+
+
+{\ttfamily \#include $<$subprocess.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structsubprocess_1_1output_a34c49d15b0678afeded5547519439fec}\label{structsubprocess_1_1output_a34c49d15b0678afeded5547519439fec}} 
+{\bfseries output} (int fd)
+\item 
+\mbox{\Hypertarget{structsubprocess_1_1output_af467ee1e3477657b7acf31197bb4b889}\label{structsubprocess_1_1output_af467ee1e3477657b7acf31197bb4b889}} 
+{\bfseries output} (F\+I\+LE $\ast$fp)
+\item 
+\mbox{\Hypertarget{structsubprocess_1_1output_ae9e3dba23eef8858b8dbfc887db67edc}\label{structsubprocess_1_1output_ae9e3dba23eef8858b8dbfc887db67edc}} 
+{\bfseries output} (const char $\ast$filename)
+\item 
+\mbox{\Hypertarget{structsubprocess_1_1output_a1d42f67b75c7ea084c170cc32f61127a}\label{structsubprocess_1_1output_a1d42f67b75c7ea084c170cc32f61127a}} 
+{\bfseries output} (\hyperlink{namespacesubprocess_a8c21131feb99bed9ffa644851ff499ed}{I\+O\+T\+Y\+PE} typ)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structsubprocess_1_1output_a9d19a26f40f1a19111f7aa1991c2fbea}\label{structsubprocess_1_1output_a9d19a26f40f1a19111f7aa1991c2fbea}} 
+int {\bfseries rd\+\_\+ch\+\_\+} = -\/1
+\item 
+\mbox{\Hypertarget{structsubprocess_1_1output_acceb716c651dfc52156ff56d7b090c58}\label{structsubprocess_1_1output_acceb716c651dfc52156ff56d7b090c58}} 
+int {\bfseries wr\+\_\+ch\+\_\+} = -\/1
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Option to specify the output channel for the child process. It can be\+:
+\begin{DoxyEnumerate}
+\item An already open file descriptor.
+\item A file name.
+\item I\+O\+T\+Y\+PE. Usually a P\+I\+PE.
+\end{DoxyEnumerate}
+
+Eg\+: output\{P\+I\+PE\} OR output\{\char`\"{}output.\+txt\char`\"{}\} 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+subprocess.\+hpp\end{DoxyCompactItemize}

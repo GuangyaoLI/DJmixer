@@ -1,0 +1,41 @@
+\hypertarget{classsubprocess_1_1detail_1_1Communication}{}\section{subprocess\+:\+:detail\+:\+:Communication Class Reference}
+\label{classsubprocess_1_1detail_1_1Communication}\index{subprocess\+::detail\+::\+Communication@{subprocess\+::detail\+::\+Communication}}
+
+
+{\ttfamily \#include $<$subprocess.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Communication_a0f87a58d37557e7418bba75687980a3c}\label{classsubprocess_1_1detail_1_1Communication_a0f87a58d37557e7418bba75687980a3c}} 
+{\bfseries Communication} (\hyperlink{classsubprocess_1_1detail_1_1Streams}{Streams} $\ast$stream)
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Communication_a333d99ade2e7d8be6c38e032f0e3916b}\label{classsubprocess_1_1detail_1_1Communication_a333d99ade2e7d8be6c38e032f0e3916b}} 
+void {\bfseries operator=} (const \hyperlink{classsubprocess_1_1detail_1_1Communication}{Communication} \&)=delete
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Communication_a54fd4dc03ae248132f46689e2b004358}\label{classsubprocess_1_1detail_1_1Communication_a54fd4dc03ae248132f46689e2b004358}} 
+int {\bfseries send} (const char $\ast$msg, size\+\_\+t length)
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Communication_a63c33aca25545c9d37db6a546a86f632}\label{classsubprocess_1_1detail_1_1Communication_a63c33aca25545c9d37db6a546a86f632}} 
+int {\bfseries send} (const std\+::vector$<$ char $>$ \&msg)
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Communication_a8c17c404bf117b7d6d947e4ac297e40f}\label{classsubprocess_1_1detail_1_1Communication_a8c17c404bf117b7d6d947e4ac297e40f}} 
+std\+::pair$<$ \hyperlink{classsubprocess_1_1Buffer}{Out\+Buffer}, \hyperlink{classsubprocess_1_1Buffer}{Err\+Buffer} $>$ {\bfseries communicate} (const char $\ast$msg, size\+\_\+t length)
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Communication_a6ed126bc2297ab25edb5c69085b56280}\label{classsubprocess_1_1detail_1_1Communication_a6ed126bc2297ab25edb5c69085b56280}} 
+std\+::pair$<$ \hyperlink{classsubprocess_1_1Buffer}{Out\+Buffer}, \hyperlink{classsubprocess_1_1Buffer}{Err\+Buffer} $>$ {\bfseries communicate} (const std\+::vector$<$ char $>$ \&msg)
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Communication_a5197c3390f95df0dfd64f75fd771dfd5}\label{classsubprocess_1_1detail_1_1Communication_a5197c3390f95df0dfd64f75fd771dfd5}} 
+void {\bfseries set\+\_\+out\+\_\+buf\+\_\+cap} (size\+\_\+t cap)
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1detail_1_1Communication_a04ed0a2b92b10ef22321fb49e1d51d81}\label{classsubprocess_1_1detail_1_1Communication_a04ed0a2b92b10ef22321fb49e1d51d81}} 
+void {\bfseries set\+\_\+err\+\_\+buf\+\_\+cap} (size\+\_\+t cap)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A helper class to \hyperlink{classsubprocess_1_1detail_1_1Streams}{Streams}. This takes care of management of communicating with the child process with the means of the correct file descriptor. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+subprocess.\+hpp\end{DoxyCompactItemize}

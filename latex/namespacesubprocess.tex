@@ -1,0 +1,132 @@
+\hypertarget{namespacesubprocess}{}\section{subprocess Namespace Reference}
+\label{namespacesubprocess}\index{subprocess@{subprocess}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classsubprocess_1_1Buffer}{Buffer}
+\item 
+struct \hyperlink{structsubprocess_1_1bufsize}{bufsize}
+\item 
+class \hyperlink{classsubprocess_1_1CalledProcessError}{Called\+Process\+Error}
+\item 
+struct \hyperlink{structsubprocess_1_1close__fds}{close\+\_\+fds}
+\item 
+struct \hyperlink{structsubprocess_1_1cwd}{cwd}
+\item 
+struct \hyperlink{structsubprocess_1_1defer__spawn}{defer\+\_\+spawn}
+\item 
+struct \hyperlink{structsubprocess_1_1environment}{environment}
+\item 
+struct \hyperlink{structsubprocess_1_1error}{error}
+\item 
+struct \hyperlink{structsubprocess_1_1executable}{executable}
+\item 
+struct \hyperlink{structsubprocess_1_1input}{input}
+\item 
+class \hyperlink{classsubprocess_1_1OSError}{O\+S\+Error}
+\item 
+struct \hyperlink{structsubprocess_1_1output}{output}
+\item 
+class \hyperlink{classsubprocess_1_1Popen}{Popen}
+\item 
+class \hyperlink{classsubprocess_1_1preexec__func}{preexec\+\_\+func}
+\item 
+struct \hyperlink{structsubprocess_1_1session__leader}{session\+\_\+leader}
+\item 
+struct \hyperlink{structsubprocess_1_1shell}{shell}
+\item 
+struct \hyperlink{structsubprocess_1_1string__arg}{string\+\_\+arg}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacesubprocess_a7753c731a00d832f572a6814ce9b13ee}\label{namespacesubprocess_a7753c731a00d832f572a6814ce9b13ee}} 
+using {\bfseries Out\+Buffer} = \hyperlink{classsubprocess_1_1Buffer}{Buffer}
+\item 
+\mbox{\Hypertarget{namespacesubprocess_a965118ad09e742f42019863b030efb24}\label{namespacesubprocess_a965118ad09e742f42019863b030efb24}} 
+using {\bfseries Err\+Buffer} = \hyperlink{classsubprocess_1_1Buffer}{Buffer}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespacesubprocess_a8c21131feb99bed9ffa644851ff499ed}{I\+O\+T\+Y\+PE} \{ {\bfseries S\+T\+D\+O\+UT} = 1, 
+{\bfseries S\+T\+D\+E\+RR}, 
+{\bfseries P\+I\+PE}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename... Args$>$ }\\int \hyperlink{namespacesubprocess_a2568089d153628506e8ed02f94f06682}{call} (std\+::initializer\+\_\+list$<$ const char $\ast$$>$ plist, Args \&\&... args)
+\item 
+\mbox{\Hypertarget{namespacesubprocess_abcf05011e85cc7d55ff83e988a4d5b9f}\label{namespacesubprocess_abcf05011e85cc7d55ff83e988a4d5b9f}} 
+{\footnotesize template$<$typename... Args$>$ }\\int {\bfseries call} (const std\+::string \&arg, Args \&\&... args)
+\item 
+{\footnotesize template$<$typename... Args$>$ }\\\hyperlink{classsubprocess_1_1Buffer}{Out\+Buffer} \hyperlink{namespacesubprocess_ab990a3b96997b604c9156843a687552a}{check\+\_\+output} (std\+::initializer\+\_\+list$<$ const char $\ast$$>$ plist, Args \&\&... args)
+\item 
+\mbox{\Hypertarget{namespacesubprocess_a080806e0ed868dd75a615b0186201db3}\label{namespacesubprocess_a080806e0ed868dd75a615b0186201db3}} 
+{\footnotesize template$<$typename... Args$>$ }\\\hyperlink{classsubprocess_1_1Buffer}{Out\+Buffer} {\bfseries check\+\_\+output} (const std\+::string \&arg, Args \&\&... args)
+\item 
+{\footnotesize template$<$typename... Args$>$ }\\\hyperlink{classsubprocess_1_1Buffer}{Out\+Buffer} \hyperlink{namespacesubprocess_a3c1cdb0eba1dfd9fd8ab48c334b8da59}{pipeline} (Args \&\&... args)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Documentation for C++ subprocessing libraray.
+
+\begin{DoxyCopyright}{Copyright}
+The code is licensed under the \href{http://opensource.org/licenses/MIT}{\tt M\+IT License}\+: ~\newline
+ Copyright \copyright{} 2016-\/2018 Arun Muralidharan. ~\newline
+ Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \char`\"{}\+Software\char`\"{}), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions\+: ~\newline
+ The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. ~\newline
+ T\+HE S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED \char`\"{}\+A\+S I\+S\char`\"{}, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+TY OF A\+NY K\+I\+ND, E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED, I\+N\+C\+L\+U\+D\+I\+NG B\+UT N\+OT L\+I\+M\+I\+T\+ED TO T\+HE W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY, F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+ND N\+O\+N\+I\+N\+F\+R\+I\+N\+G\+E\+M\+E\+NT. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE A\+U\+T\+H\+O\+RS OR C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY C\+L\+A\+IM, D\+A\+M\+A\+G\+ES OR O\+T\+H\+ER L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN AN A\+C\+T\+I\+ON OF C\+O\+N\+T\+R\+A\+CT, T\+O\+RT OR O\+T\+H\+E\+R\+W\+I\+SE, A\+R\+I\+S\+I\+NG F\+R\+OM, O\+UT OF OR IN C\+O\+N\+N\+E\+C\+T\+I\+ON W\+I\+TH T\+HE S\+O\+F\+T\+W\+A\+RE OR T\+HE U\+SE OR O\+T\+H\+ER D\+E\+A\+L\+I\+N\+GS IN T\+HE S\+O\+F\+T\+W\+A\+RE.
+\end{DoxyCopyright}
+\begin{DoxyAuthor}{Author}
+\mbox{[}Arun Muralidharan\mbox{]} 
+\end{DoxyAuthor}
+\begin{DoxySeeAlso}{See also}
+\href{https://github.com/arun11299/cpp-subprocess}{\tt https\+://github.\+com/arun11299/cpp-\/subprocess} to download the source code
+\end{DoxySeeAlso}
+\begin{DoxyVersion}{Version}
+1.\+0.\+0
+\end{DoxyVersion}
+Getting started with reading this source code. The source is mainly divided into four parts\+:
+\begin{DoxyEnumerate}
+\item Exception Classes\+: These are very basic exception classes derived from runtime\+\_\+error exception. There are two types of exception thrown from subprocess library\+: \hyperlink{classsubprocess_1_1OSError}{O\+S\+Error} and \hyperlink{classsubprocess_1_1CalledProcessError}{Called\+Process\+Error}
+\item \hyperlink{classsubprocess_1_1Popen}{Popen} Class This is the main class the users will deal with. It provides with all the A\+PI\textquotesingle{}s to deal with processes.
+\item Util namespace It includes some helper functions to split/join a string, reading from file descriptors, waiting on a process, fcntl options on file descriptors etc.
+\item Detail namespace This includes some metaprogramming and helper classes. 
+\end{DoxyEnumerate}
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacesubprocess_a8c21131feb99bed9ffa644851ff499ed}\label{namespacesubprocess_a8c21131feb99bed9ffa644851ff499ed}} 
+\index{subprocess@{subprocess}!I\+O\+T\+Y\+PE@{I\+O\+T\+Y\+PE}}
+\index{I\+O\+T\+Y\+PE@{I\+O\+T\+Y\+PE}!subprocess@{subprocess}}
+\subsubsection{\texorpdfstring{I\+O\+T\+Y\+PE}{IOTYPE}}
+{\footnotesize\ttfamily enum \hyperlink{namespacesubprocess_a8c21131feb99bed9ffa644851ff499ed}{subprocess\+::\+I\+O\+T\+Y\+PE}}
+
+Used for redirecting input/output/error 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacesubprocess_a2568089d153628506e8ed02f94f06682}\label{namespacesubprocess_a2568089d153628506e8ed02f94f06682}} 
+\index{subprocess@{subprocess}!call@{call}}
+\index{call@{call}!subprocess@{subprocess}}
+\subsubsection{\texorpdfstring{call()}{call()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+int subprocess\+::call (\begin{DoxyParamCaption}\item[{std\+::initializer\+\_\+list$<$ const char $\ast$$>$}]{plist,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})}
+
+Run the command with arguments and wait for it to complete. The parameters passed to the argument are exactly the same one would use for \hyperlink{classsubprocess_1_1Popen}{Popen} constructors. \mbox{\Hypertarget{namespacesubprocess_ab990a3b96997b604c9156843a687552a}\label{namespacesubprocess_ab990a3b96997b604c9156843a687552a}} 
+\index{subprocess@{subprocess}!check\+\_\+output@{check\+\_\+output}}
+\index{check\+\_\+output@{check\+\_\+output}!subprocess@{subprocess}}
+\subsubsection{\texorpdfstring{check\+\_\+output()}{check\_output()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+\hyperlink{classsubprocess_1_1Buffer}{Out\+Buffer} subprocess\+::check\+\_\+output (\begin{DoxyParamCaption}\item[{std\+::initializer\+\_\+list$<$ const char $\ast$$>$}]{plist,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})}
+
+Run the command with arguments and wait for it to complete. If the exit code was non-\/zero it raises a \hyperlink{classsubprocess_1_1CalledProcessError}{Called\+Process\+Error}. The arguments are the same as for the \hyperlink{classsubprocess_1_1Popen}{Popen} constructor. \mbox{\Hypertarget{namespacesubprocess_a3c1cdb0eba1dfd9fd8ab48c334b8da59}\label{namespacesubprocess_a3c1cdb0eba1dfd9fd8ab48c334b8da59}} 
+\index{subprocess@{subprocess}!pipeline@{pipeline}}
+\index{pipeline@{pipeline}!subprocess@{subprocess}}
+\subsubsection{\texorpdfstring{pipeline()}{pipeline()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+\hyperlink{classsubprocess_1_1Buffer}{Out\+Buffer} subprocess\+::pipeline (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption})}
+
+An easy way to pipeline easy commands. Provide the commands that needs to be pipelined in the order they would appear in a regular command. It would wait for the last command provided in the pipeline to finish and then return the Out\+Buffer. 

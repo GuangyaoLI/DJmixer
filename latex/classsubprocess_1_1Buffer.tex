@@ -1,0 +1,36 @@
+\hypertarget{classsubprocess_1_1Buffer}{}\section{subprocess\+:\+:Buffer Class Reference}
+\label{classsubprocess_1_1Buffer}\index{subprocess\+::\+Buffer@{subprocess\+::\+Buffer}}
+
+
+{\ttfamily \#include $<$subprocess.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1Buffer_a1b8663f33bef5aaab50d598735277318}\label{classsubprocess_1_1Buffer_a1b8663f33bef5aaab50d598735277318}} 
+{\bfseries Buffer} (size\+\_\+t cap)
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1Buffer_a35d472c265f5e327c2893df2a2cec950}\label{classsubprocess_1_1Buffer_a35d472c265f5e327c2893df2a2cec950}} 
+void {\bfseries add\+\_\+cap} (size\+\_\+t cap)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1Buffer_a8e0d10dd27c1354156d6f445ec8a8121}\label{classsubprocess_1_1Buffer_a8e0d10dd27c1354156d6f445ec8a8121}} 
+std\+::vector$<$ char $>$ {\bfseries buf}
+\item 
+\mbox{\Hypertarget{classsubprocess_1_1Buffer_a44c75d3fa33e08742043c8bd059175b7}\label{classsubprocess_1_1Buffer_a44c75d3fa33e08742043c8bd059175b7}} 
+size\+\_\+t {\bfseries length} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class\+: \hyperlink{classsubprocess_1_1Buffer}{Buffer} This class is a very thin wrapper around std\+::vector$<$char$>$ This is basically used to determine the length of the actual data stored inside the dynamically resized vector.
+
+This is what is returned as the output to communicate and check\+\_\+output functions, so, users must know about this class.
+
+Out\+Buffer and Err\+Buffer are just different typedefs to this class. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+subprocess.\+hpp\end{DoxyCompactItemize}
