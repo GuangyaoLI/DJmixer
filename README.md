@@ -21,3 +21,13 @@ Hardware
   * DuPont line
 * keyboard and mouse(optional)
 ```
+## Video Demo
+[![Everything Is AWESOME](  http://img.youtube.com/vi/wFj2qqwLuvs/maxresdefault.jpg)](https://www.youtube.com/watch?v=7w9ATuSODwc "Everything Is AWESOME")
+## Software  Usage
+
+## Circuit Design
+
+## PCB Design
+
+## social media
+Twitter  https://twitter.com/UofGd?lang=en
