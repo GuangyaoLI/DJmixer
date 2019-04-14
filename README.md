@@ -12,9 +12,12 @@ Try using this product to create unique music in the party with your friends！
 
 Hardware
 -----
-*PCB Board
-<br>*1KΩ resistor（x4）
-<br>*2KΩ resistor（x4）
-<br>*Four Ultrasonic sensor（HC-SR04)
-<br>*DuPont line
-<br>*raspberry pie 3b+
+```
+* Raspberry pi (with 3.5mm speaker output)
+* PCB Board
+* Four Ultrasonic sensor（HC-SR04)
+  * 2KΩ resistor（x4）
+  * 1KΩ resistor（x4）
+  * DuPont line
+* keyboard and mouse(optional)
+```
