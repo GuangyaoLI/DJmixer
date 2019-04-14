@@ -31,3 +31,4 @@ Hardware
 
 ## social media
 Twitter  https://twitter.com/UofGd?lang=en
+hackaday io https://hackaday.io/project/164857-djmixer
