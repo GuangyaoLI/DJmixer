@@ -1,5 +1,5 @@
 # DJmixer
-![Image text](https://github.com/GuangyaoLI/DJmixer/blob/master/DJmixer.png)
+![Image text](https://github.com/GuangyaoLI/DJmixer/blob/master/img/introduction.png)
 
 
 Introduction
