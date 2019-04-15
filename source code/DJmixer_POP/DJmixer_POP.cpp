@@ -274,7 +274,7 @@ int main(void)
 						dis2 = disMeasure(Trig2,Echo2);
 						cout << "distance2 = " << dis2 << " cm." << endl;
 						
-						if(dis2>=10 && dis2<20)
+						if(dis2>=5 && dis2<15)
 						{
 							path2 =soundpath4;
 							auto q=Popen({"omxplayer","-o","local","--loop",path2},output{PIPE},input{PIPE});
@@ -289,7 +289,7 @@ int main(void)
 								dis4 = disMeasure(Trig4,Echo4);
 								cout << "distance4 = " << dis4 << " cm." << endl;
 								
-								if((dis2>=20 && dis2<40)||(dis3>=11 && dis3<13))
+								if((dis2>=15 && dis2<35)||(dis3>=11 && dis3<13))
 								{
 									q.send(msgq, strlen(msgq));
 									flag =0;
@@ -313,7 +313,7 @@ int main(void)
 								delay(1000);
 							}
 						}
-						else if( dis2>=20 && dis2<30)
+						else if( dis2>=15 && dis2<25)
 						{
 							path2 =soundpath5;
 							auto q=Popen({"omxplayer","-o","local","--loop",path2},output{PIPE},input{PIPE});
@@ -328,7 +328,7 @@ int main(void)
 								dis4 = disMeasure(Trig4,Echo4);
 								cout << "distance4 = " << dis4 << " cm." << endl;
 					
-								if((dis2>=10 && dis2<20)||(dis2>=30 && dis2<40)||(dis3>=11 && dis3<13))
+								if((dis2>=5 && dis2<15)||(dis2>=25 && dis2<35)||(dis3>=11 && dis3<13))
 								{
 									q.send(msgq, strlen(msgq));
 									flag =0;
@@ -352,7 +352,7 @@ int main(void)
 								delay(1000);
 							}
 						}
-						else if( dis2>=30 &&dis2<40)
+						else if( dis3>=25 &&dis2<35)
 						{
 							path2 =soundpath6;
 							auto q=Popen({"omxplayer","-o","local","--loop",path2},output{PIPE},input{PIPE});
@@ -367,7 +367,7 @@ int main(void)
 								dis4 = disMeasure(Trig4,Echo4);
 								cout << "distance4 = " << dis4 << " cm." << endl;
 					
-								if((dis2>=10 && dis2<30)||(dis3>=11 && dis3<13))
+								if((dis2>=5 && dis2<25)||(dis3>=11 && dis3<13))
 								{
 									q.send(msgq, strlen(msgq));
 									flag =0;
