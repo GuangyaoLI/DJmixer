@@ -41,7 +41,7 @@ More information can be found [wiki](https://github.com/GuangyaoLI/DJmixer/wiki/
 Social Media
 -----
 * youtube: [Test video]
-[![Everything Is AWESOME](  http://img.youtube.com/vi/wFj2qqwLuvs/maxresdefault.jpg)](https://www.youtube.com/watch?v=tp2C-s11dhI "Everything Is AWESOME")
+[![video](  https://github.com/GuangyaoLI/DJmixer/blob/master/img/introduction.png)](https://www.youtube.com/watch?v=tp2C-s11dhI)
 * [Twitter](https://twitter.com/UofGd?lang=en)
 * [hackaday io](https://hackaday.io/project/164857-djmixer)
 
