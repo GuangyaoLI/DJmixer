@@ -21,6 +21,9 @@ Hardware
 * keyboard and mouse(optional)
 * Headphone or speaker
 ```
+## PCB design
+![](https://github.com/GuangyaoLI/DJmixer/blob/master/hardware/layout.png)
+
 More information can be found [here](https://github.com/GuangyaoLI/DJmixer/tree/master/hardware) or [wiki](https://github.com/GuangyaoLI/DJmixer/wiki/Hardware).
 
 Software
