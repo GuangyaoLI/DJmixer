@@ -1,6 +1,4 @@
 # DJmixer
-![Image text](https://github.com/GuangyaoLI/DJmixer/blob/master/DJmixer.png)
-
 [![video](  https://github.com/GuangyaoLI/DJmixer/blob/master/DJmixer.png)](https://www.youtube.com/watch?v=tp2C-s11dhI)
 
 Introduction
@@ -8,7 +6,7 @@ Introduction
 This project tried to use a four sonic sensors to make a fun and convenient music mixer that can be connected to headphones or speakers. 
 The two sensors are a group, and there are two groups in the project. 
 For each set of sensors,
-one sensor controls five different music, and the other sensor of the group controls the speed and volume of the music.
+one sensor controls three different music, and the other sensor of the group controls the speed and volume of the music.
 Try using this product to create unique music in the party with your friends！
 
 Hardware
@@ -22,14 +20,17 @@ Hardware
   * DuPont line
 * keyboard and mouse(optional)
 ```
+More information can be found [here](https://github.com/GuangyaoLI/DJmixer/tree/master/hardware).
 
 Software
 -----
-```
-* before work: Installation package（WiringPi and OMXplayer）
-* before work：download the subprocess.hpp
-* main code
-```
+
+* Before work:
+
+    Installation package（[WiringPi](http://wiringpi.com/download-and-install/) and [OMXPlayer](https://www.raspberrypi.org/documentation/raspbian/applications/omxplayer.md)).     
+    Download the [subprocess.hpp](https://github.com/arun11299/cpp-subprocess) from arun11299.
+
+* main code: [DJmixer_POP](https://github.com/GuangyaoLI/DJmixer/tree/master/source%20code/DJmixer_POP) (Procedure Oriented Programming)
 
 Social Media
 -----
