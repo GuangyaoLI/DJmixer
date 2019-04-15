@@ -21,7 +21,7 @@ Hardware
 * keyboard and mouse(optional)
 * Headphone or speaker
 ```
-More information can be found [here](https://github.com/GuangyaoLI/DJmixer/tree/master/hardware).
+More information can be found [here](https://github.com/GuangyaoLI/DJmixer/tree/master/hardware) or [wiki](https://github.com/GuangyaoLI/DJmixer/wiki/Hardware).
 
 Software
 -----
@@ -32,6 +32,8 @@ Software
     Download the [subprocess.hpp](https://github.com/arun11299/cpp-subprocess) from arun11299.
 
 * main code: [DJmixer_POP](https://github.com/GuangyaoLI/DJmixer/tree/master/source%20code/DJmixer_POP) (Procedure Oriented Programming)
+
+More information can be found [wiki](https://github.com/GuangyaoLI/DJmixer/wiki/Software)
 
 Social Media
 -----
