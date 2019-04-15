@@ -35,7 +35,8 @@ Software
 
 Social Media
 -----
-* youtube: [Test video](https://www.youtube.com/watch?v=tp2C-s11dhI)
+* youtube: [Test video]
+[![Everything Is AWESOME](  http://img.youtube.com/vi/wFj2qqwLuvs/maxresdefault.jpg)](https://www.youtube.com/watch?v=tp2C-s11dhI "Everything Is AWESOME")
 * [Twitter](https://twitter.com/UofGd?lang=en)
 * [hackaday io](https://hackaday.io/project/164857-djmixer)
 
