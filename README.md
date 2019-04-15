@@ -19,6 +19,7 @@ Hardware
   * 1KΩ resistor（x4）
   * DuPont line
 * keyboard and mouse(optional)
+* Headphone or speaker
 ```
 More information can be found [here](https://github.com/GuangyaoLI/DJmixer/tree/master/hardware).
 
