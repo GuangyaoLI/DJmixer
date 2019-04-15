@@ -1,6 +1,7 @@
 # DJmixer
 ![Image text](https://github.com/GuangyaoLI/DJmixer/blob/master/DJmixer.png)
 
+[![video](  https://github.com/GuangyaoLI/DJmixer/blob/master/DJmixer.png)](https://www.youtube.com/watch?v=tp2C-s11dhI)
 
 Introduction
 -----
@@ -32,9 +33,9 @@ Software
 
 Social Media
 -----
-* [youtube] <https://www.youtube.com/watch?v=tp2C-s11dhI>
-* [Twitter] <https://twitter.com/UofGd?lang=en>
-* [hackaday io] <https://hackaday.io/project/164857-djmixer>
+* youtube: [Test video](https://www.youtube.com/watch?v=tp2C-s11dhI)
+* [Twitter](https://twitter.com/UofGd?lang=en)
+* [hackaday io](https://hackaday.io/project/164857-djmixer)
 
 Division of labor
 -----
