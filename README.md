@@ -21,8 +21,12 @@ Hardware
 * keyboard and mouse(optional)
 * Headphone or speaker
 ```
-## PCB design
+### PCB design
 ![](https://github.com/GuangyaoLI/DJmixer/blob/master/hardware/layout.png)
+
+### Model
+![](https://github.com/GuangyaoLI/DJmixer/blob/master/img/Initial_model.jpg)
+![](https://github.com/GuangyaoLI/DJmixer/blob/master/img/Inside_%20box.jpg)
 
 More information can be found [here](https://github.com/GuangyaoLI/DJmixer/tree/master/hardware) or [wiki](https://github.com/GuangyaoLI/DJmixer/wiki/Hardware).
 
@@ -47,7 +51,7 @@ Social Media
 
 Division of labor
 -----
-![Image text](https://github.com/GuangyaoLI/DJmixer/blob/master/img/timetable.png)
+![Image text](https://github.com/GuangyaoLI/DJmixer/blob/master/img/schedule.png)
 
 
 
