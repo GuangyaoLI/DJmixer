@@ -36,9 +36,9 @@ Software
 * Before work:
 
     Installation package（[WiringPi](http://wiringpi.com/download-and-install/) and [OMXPlayer](https://www.raspberrypi.org/documentation/raspbian/applications/omxplayer.md)).     
-    Download the [subprocess.hpp](https://github.com/arun11299/cpp-subprocess) from arun11299.
+   
 
-* main code: [DJmixer_POP](https://github.com/GuangyaoLI/DJmixer/tree/master/source%20code/DJmixer_POP) (Procedure Oriented Programming)
+* main code: [DJmixer_POP](https://github.com/GuangyaoLI/DJmixer/tree/master/source%20code/DJmixer_POP) 
 
 More information can be found [wiki](https://github.com/GuangyaoLI/DJmixer/wiki/Software)
 
