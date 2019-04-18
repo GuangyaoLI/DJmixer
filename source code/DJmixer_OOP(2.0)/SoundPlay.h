@@ -30,9 +30,9 @@ public:
 
 
 private:
-	PLAY_STATUS_S play_state;  //²¥·Å×´Ì¬
+	PLAY_STATUS_S play_state;
 	int beginplay(char *path);
-    auto p;
+        auto p;
 
 };
 
