@@ -9,11 +9,11 @@
 #include <sys/wait.h>
 #include <sys/types.h>
 
-#include<string.h>  
+#include <string.h>  
 #include <string>
-#include<dirent.h>  
-#include<sys/stat.h>   
-#include<pthread.h>  
+#include <dirent.h>  
+#include <sys/stat.h>   
+#include <pthread.h>
 #include "MainBusiness.h"
 
 using namespace std;
@@ -33,7 +33,7 @@ void MainBusiness::startGame()
 {
 	if(!isInitData)
 	{
-		throw string("void MainBusiness::startGame() ERROR; not isInitData£¡");
+		throw string("void MainBusiness::startGame() ERROR; not isInitDataï¼");
 		return;
 	}
 
@@ -48,38 +48,38 @@ void MainBusiness::startGame()
 		volumpath1=m_MeasureCtrl_volume1.GetplayPath(volumflag1);
 		volumpath2=m_MeasureCtrl_volume2.GetplayPath(volumflag2); 
 
-		if(volumflag1==1 && strcmp(volumpath1.c_str(),volumepath_vec1[0].c_str()))  //¹Ø±Õ°´Å¥
+		if(volumflag1==1 && strcmp(volumpath1.c_str(),volumepath_vec1[0].c_str()))  // OFF
 		{
 			start=false;
 			m_SoundPlay1.stopmusic();
 			m_SoundPlay2.stopmusic();
 			usleep(100*MS);
-			continue; //²»½øĞĞ²¥·Å
+			continue; // stop
 		}
-		else if(volumflag2==1 && strcmp(volumpath2.c_str(),volumepath_vec2[0].c_str())) //¿ªÆô°´Å¥
+		else if(volumflag2==1 && strcmp(volumpath2.c_str(),volumepath_vec2[0].c_str())) // ON
 		{
 			start=true;
 		}
 		
 		if(start)
 		{
-			//µÚÒ»ÖÖÒôÆµ¿ØÖÆ
+			// music1
 			if(playflag1==1)
 			{
 				m_SoundPlay1.playmusic(soundpath1.c_str());
 			}
 
-			//µÚ2ÖÖÒôÆµ¿ØÖÆ
+			// music2
 			if(playflag2==1)
 			{
 				m_SoundPlay2.playmusic(soundpath2.c_str());
 			}
-			//µÚ1ÖÖÒôÁ¿
+			//volume1
 			if(volumflag1==1)
 			{
 				m_SoundPlay1.sendMsg(volumpath1.c_str());
 			}
-			//µÚ2ÖÖÒôÁ¿
+			// volume2
 			if(volumflag2==1)
 			{
 				m_SoundPlay2.sendMsg(volumpath2.c_str());
@@ -109,31 +109,31 @@ void MainBusiness::InitData()
 	pinMode(Trig4, OUTPUT);
 
 
-	//³õÊ¼»¯²ÎÊıÖµ
-	soundpath_vec1.push_back("DesiJourney.wav");
+	//Initialization parameter value
+	soundpath_vec1.push_back("DesiJourney.wav");   // music1
 	soundpath_vec1.push_back("doublebass.wav");
-	soundpath_vec1.push_back("MoodyLoop.wav");  //µÚÒ»¸ö´«¸ĞÆ÷·Ö3¶Î
+	soundpath_vec1.push_back("MoodyLoop.wav");  
 
 	musicDistence_vec1.push_back(5);
 	musicDistence_vec1.push_back(15);
 	musicDistence_vec1.push_back(25);
-	musicDistence_vec1.push_back(35);  //ÒªÇó°´´ÓĞ¡µ½´ó£¬²¢¶àÒ»¸ö
+	musicDistence_vec1.push_back(35);  
 
-	soundpath_vec2.push_back("TheEnd.mp3");
+	soundpath_vec2.push_back("TheEnd.mp3");    //music2
 	soundpath_vec2.push_back("AroundWorld.mp3");
-	soundpath_vec2.push_back("Decision.mp3");  //µÚÒ»¸ö´«¸ĞÆ÷·Ö3¶Î
+	soundpath_vec2.push_back("Decision.mp3");  
 
 	musicDistence_vec2.push_back(5);
 	musicDistence_vec2.push_back(15);
 	musicDistence_vec2.push_back(25);
-	musicDistence_vec2.push_back(35);  //ÒªÇó°´´ÓĞ¡µ½´ó£¬²¢¶àÒ»¸ö
+	musicDistence_vec2.push_back(35);  
 
 
 	volumepath_vec1.push_back("exit");
-	volumepath_vec1.push_back("1");
-	volumepath_vec1.push_back("2");
-	volumepath_vec1.push_back("-");
-	volumepath_vec1.push_back("+");
+	volumepath_vec1.push_back("1");  //slow speed
+	volumepath_vec1.push_back("2");  //fast speed
+	volumepath_vec1.push_back("-");  //low volume
+	volumepath_vec1.push_back("+");  //high volume
 
 	volumeDistence_vec1.push_back(3);
 	volumeDistence_vec1.push_back(5);
@@ -156,14 +156,14 @@ void MainBusiness::InitData()
 	volumeDistence_vec2.push_back(13);
 
 	///////////////////////////////////////////////////
-	//³õÊ¼»¯¶ÔÏó²ÎÊı
+	//åˆå§‹åŒ–å¯¹è±¡å‚æ•°
 
 	m_MeasureCtrl_music1.Ctrlname ="distance1";
 	m_MeasureCtrl_music2.Ctrlname ="distance2";
 	m_MeasureCtrl_volume1.Ctrlname ="distance3";
 	m_MeasureCtrl_volume2.Ctrlname ="distance4";
 
-	m_MeasureCtrl_music1.SetEcho_Trig(Echo1,Trig1);  //ÉèÖÃÒı½Å
+	m_MeasureCtrl_music1.SetEcho_Trig(Echo1,Trig1);  //set GPIO
 	m_MeasureCtrl_music2.SetEcho_Trig(Echo2,Trig2);
 	m_MeasureCtrl_volume1.SetEcho_Trig(Echo3,Trig3);
 	m_MeasureCtrl_volume2.SetEcho_Trig(Echo4,Trig4);
