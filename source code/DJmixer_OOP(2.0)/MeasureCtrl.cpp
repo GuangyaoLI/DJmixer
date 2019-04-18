@@ -8,10 +8,8 @@
 #include <signal.h>
 #include <iostream>
 #include <sys/wait.h>
-#include <sys/types.h>
-
-using namespace std;
 #include "MeasureCtrl.h"
+using namespace std;
 
 
 MeasureCtrl::MeasureCtrl(void)
@@ -105,17 +103,17 @@ float MeasureCtrl::disMeasure(void)
 	return dis;
 }
 
-string MeasureCtrl::GetplayPath(int &playflag)  //playflag 1 ²¥·Å  0 Ê²Ã´¶¼²»×ö  -1  Í£Ö¹
+string MeasureCtrl::GetplayPath(int &playflag)  //playflag 1:play  0:do_nothing  -1:stop
 {
 	if(!isInit_mudis&&!isInit_spath)
 	{
-		throw string("char * MeasureCtrl::GetplayPath(int &playflag)ERRor£¬not isInit_mudis or isInit_spath£¡");
+		throw string("char * MeasureCtrl::GetplayPath(int &playflag)ERRorï¼Œnot isInit_mudis or isInit_spathï¼");
 	}
 
 	string *temp_path;
 	float dis = disMeasure();
 	printf("%s = %0.2f cm\n",Ctrlname,dis);
-	bool isInside =false;  //ÊÇ·ñÔÚ²âÊÔ·¶Î§ÄÚ
+	bool isInside =false;  
 	for(int i=0;i<musicDistence.size()-1;i++)
 	{
 		if(dis>=musicDistence[i] &&dis< musicDistence[i+1])
@@ -131,7 +129,7 @@ string MeasureCtrl::GetplayPath(int &playflag)  //playflag 1 ²¥·Å  0 Ê²Ã´¶¼²»×ö 
 		oldflag =0;
 		flag =0;
 
-		playflag =0; //Ê²Ã´¶¼²»×ö
+		playflag =0; //do_nothing
 		return "";
 		
 	}
