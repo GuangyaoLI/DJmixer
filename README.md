@@ -38,7 +38,10 @@ Software
     Installation package（[WiringPi](http://wiringpi.com/download-and-install/) and [OMXPlayer](https://www.raspberrypi.org/documentation/raspbian/applications/omxplayer.md)).     
    
 
-* main code: [DJmixer_POP](https://github.com/GuangyaoLI/DJmixer/tree/master/source%20code/DJmixer_POP) 
+* main code:  
+  * Procedure Oriented Programming: [DJmixer_POP](https://github.com/GuangyaoLI/DJmixer/tree/master/source%20code/DJmixer_POP)  
+  * Object-Oriented Programming: [DJmixer_OPP](https://github.com/GuangyaoLI/DJmixer/tree/master/source%20code)  
+  * Object-Oriented Programming 2.0: [DJmixer_OPP(2.0)](https://github.com/GuangyaoLI/DJmixer/tree/master/source%20code/DJmixer_OOP(2.0))
 
 More information can be found [wiki](https://github.com/GuangyaoLI/DJmixer/wiki/Software)
 
