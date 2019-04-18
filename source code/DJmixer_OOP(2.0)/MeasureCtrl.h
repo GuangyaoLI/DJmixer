@@ -26,13 +26,13 @@ private:
 	
 	int flag ; 
 	int oldflag ;
-	int Echo , Trig ;  //输入输出引脚参数
-	bool isInit_Echo ;  //是否初始化输入输出引脚
+	int Echo , Trig ;  //GPIO
+	bool isInit_Echo ;  //Whether to initialize GPIO
 	bool isInit_mudis;
 	bool isInit_spath;
 
-	vector<float> musicDistence;  //输出值的距离区间，第一个距离开始输出，最后一个距离停止输出
-	vector<string> soundpath;   //输出声音的path
+	vector<float> musicDistence; 
+	vector<string> soundpath;   
 	
 
 	float disMeasure(void);
