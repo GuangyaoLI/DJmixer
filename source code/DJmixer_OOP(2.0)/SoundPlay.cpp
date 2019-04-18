@@ -1,5 +1,3 @@
-//播放音乐类，实现音乐的播放，更新，同一时间只能播放一首音乐，只开通一个播放进程
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -11,7 +9,7 @@
 #include <time.h>
 #include <signal.h>
 #include <ctype.h>
-#include<string.h>  
+#include <string.h>  
 #include <string>
 
 #include "SoundPlay.h"
@@ -35,16 +33,16 @@ SoundPlay::~SoundPlay(void)
 
 
 
-/* 播放歌曲 */
+/* play music */
 int SoundPlay::playmusic(const char *musicname)
 {
 	if(play_state != PLAY_STATUS_STOP)
 	{
-		sendMsg("q");
+		sendMsg("q");  //stop
 	}
 
 	play_state = PLAY_STATUS_PLAY;
-    p=Popen({"omxplayer","-o","local",soundpath},output{PIPE},input{PIPE});
+        p=Popen({"omxplayer","-o","local","--loop",musicname},output{PIPE},input{PIPE});
 	usleep(400 * 1000);
 	return 0;
 }
@@ -52,7 +50,7 @@ int SoundPlay::playmusic(const char *musicname)
 
 
 
-/* 停止播放歌曲  */
+/* stop music */
 int SoundPlay::stopmusic()
 {
 	if(play_state != PLAY_STATUS_STOP)
