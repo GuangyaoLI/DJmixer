@@ -1,0 +1,18 @@
+
+Program: Program.cpp MainBusiness.o MeasureCtrl.o SoundPlay.o volume.o
+	g++ Program.cpp MainBusiness.o MeasureCtrl.o SoundPlay.o volume.o -o Program
+
+MainBusiness.o: MainBusiness.cpp
+	g++ -c MainBusiness.cpp
+
+MeasureCtrl.o: MeasureCtrl.cpp
+	g++ -c MeasureCtrl.cpp
+
+SoundPlay.o: SoundPlay.cpp
+	g++ -c SoundPlay.cpp
+
+volume.o: volume.cpp
+	g++ -c volume.cpp
+
+clean:
+	rm *.o Program
